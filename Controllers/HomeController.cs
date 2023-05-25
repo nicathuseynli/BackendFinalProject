@@ -1,20 +1,29 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Backend_Final_Project.Data;
+using Backend_Final_Project.Models;
+using Backend_Final_Project.ViewModels;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace Backend_Final_Project.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(AppDbContext context)
         {
-            _logger = logger;
+            _context = context;
         }
 
-        public IActionResult Index()
+        public async  Task<IActionResult> Index()
         {
-            return View();
+            var sliders = await _context.Sliders.ToListAsync();
+            HomeVM homevm = new HomeVM()
+            {
+                Sliders = sliders,
+            };
+            return View(homevm);
         }
     }
 }

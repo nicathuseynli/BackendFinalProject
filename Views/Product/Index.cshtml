@@ -11,7 +11,7 @@
                   <h2 class="breadcrumb-heading">Single Product</h2>
                   <ul>
                     <li>
-                      <a href="index.html">Home</a>
+                      <a  asp-controller="Home" asp-action="Index">Home</a>
                     </li>
                     <li>Single Product</li>
                   </ul>
@@ -836,7 +836,7 @@
                           <ul>
                             <li>
                               <a
-                                href="wishlist.html"
+                                  asp-controller="WishList" asp-action="Index"
                                 data-tippy="Add to wishlist"
                                 data-tippy-inertia="true"
                                 data-tippy-animation="shift-away"
@@ -866,7 +866,7 @@
                             </li>
                             <li>
                               <a
-                                href="cart.html"
+                                  asp-controller="Cart" asp-action="Index"
                                 data-tippy="Add to cart"
                                 data-tippy-inertia="true"
                                 data-tippy-animation="shift-away"
@@ -883,9 +883,8 @@
                       <div class="product-content">
                         <a
                           class="product-name"
-                          href="single-product-variable.html"
-                          >Bloody Cranesbill</a
-                        >
+                     asp-controller="Product" asp-action="Index"
+                          >Bloody Cranesbill</a>
                         <div class="price-box pb-1">
                           <span class="new-price">$45.00</span>
                         </div>
