@@ -19,9 +19,11 @@ namespace Backend_Final_Project.Controllers
         public async  Task<IActionResult> Index()
         {
             var sliders = await _context.Sliders.ToListAsync();
+            var shippings = await _context.Shippings.ToListAsync();
             HomeVM homevm = new HomeVM()
             {
                 Sliders = sliders,
+                Shippings = shippings,
             };
             return View(homevm);
         }

@@ -1,5 +1,5 @@
 ﻿namespace Backend_Final_Project.Models;
-public class Product : BaseEntity<int>
+public class ShopProduct : BaseEntity<int>
 {
     public string Name { get; set; }
     public string Description { get; set; }

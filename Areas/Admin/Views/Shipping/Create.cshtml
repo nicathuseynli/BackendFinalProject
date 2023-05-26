@@ -1,12 +1,9 @@
-﻿@model UpdateSliderVM
+﻿@model CreateShippingVM
 <div class="container">
-    <h1 class="text-center">Update Slider</h1>
-      <img src="~/images/@Model.Image" width="500px" height="500px"/>
+    <h1 class="text-center">Create Shipping</h1>
       <div class="row">
-             <form asp-action="Update" method="post" class="forms-sample" enctype="multipart/form-data">
+             <form asp-action="Create" method="post" class="forms-sample" enctype="multipart/form-data">
                  <div class="form-group">
-                   <input asp-for="Percent" class="form-control" placeholder="Percent">
-                 </div> <div class="form-group">
                    <input asp-for="Label" class="form-control" placeholder="Label">
                  </div>
                  <div class="form-group">
@@ -16,9 +13,8 @@
                    <label>Slider Image</label>
                    <input asp-for="Photo" class="form-control">
                  </div>
-                 <button type="submit" class="btn btn-outline-success me-2">Update</button>
-                 <input type="hidden" asp-for="Id"/>
+                 <button type="submit" class="btn btn-outline-success me-2">Create</button>
                  <button asp-action="Index" class="btn btn-outline-danger">Cancel</button>
              </form>
-      </div>
+    </div>
 </div>

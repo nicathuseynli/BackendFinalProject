@@ -83,7 +83,7 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
             if (slider == null)
                 return View();
 
-            string path = Path.Combine(_environment.WebRootPath, "img", slider.Image);
+            string path = Path.Combine(_environment.WebRootPath, "images", slider.Image);
 
             if (System.IO.File.Exists(path))
                 System.IO.File.Delete(path);
@@ -107,6 +107,7 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
                 Id = id,
                 Label = slider.Label,
                 Description = slider.Description,
+                Percent=slider.Percent,
                 Image = slider.Image,
             };
 
@@ -118,13 +119,10 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
         public async Task<IActionResult> Update(UpdateSliderVM updateSliderVM)
         {
 
-            if (!ModelState.IsValid)
-                return View();
-
             var slider = await _context.Sliders.FirstOrDefaultAsync(x => x.Id == updateSliderVM.Id);
             if (slider == null) return NotFound();
 
-            if (updateSliderVM.Photo !=null)
+            if (updateSliderVM.Photo != null)
             {
                 if (updateSliderVM.Photo.ContentType.Contains("image/"))
                     return View();
@@ -134,13 +132,13 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
 
 
                 string filename = updateSliderVM.Photo.FileName + " _ " + Guid.NewGuid().ToString();
-                string path = Path.Combine(_environment.WebRootPath, "img", filename);
+                string path = Path.Combine(_environment.WebRootPath, "images", filename);
 
                 using FileStream stream = new FileStream(path, FileMode.Create);
 
                 await updateSliderVM.Photo.CopyToAsync(stream);
 
-                string oldPath = Path.Combine(_environment.WebRootPath, "img", slider.Image);
+                string oldPath = Path.Combine(_environment.WebRootPath, "images", slider.Image);
                 if (System.IO.File.Exists(oldPath))
                     System.IO.File.Delete(oldPath);
                 slider.Image = filename;

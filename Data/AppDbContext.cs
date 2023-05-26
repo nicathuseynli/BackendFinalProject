@@ -9,9 +9,9 @@ namespace Backend_Final_Project.Data
         {
 
         }
-        public DbSet<Product> Products { get; set; }
+        public DbSet<ShopProduct> Products { get; set; }
         public DbSet<Slider> Sliders { get; set; }
-
+        public DbSet<Shipping> Shippings { get; set; }
     }
 }
 
