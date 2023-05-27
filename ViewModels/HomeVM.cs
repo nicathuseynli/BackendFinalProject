@@ -5,4 +5,5 @@ public class HomeVM
 {
     public List<Slider> Sliders { get; set; }
     public List<Shipping> Shippings { get; set; }
+    public List<HomeProduct> HomeProducts { get; set; }
 }

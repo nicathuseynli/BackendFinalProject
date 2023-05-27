@@ -10,7 +10,6 @@ public class CreateSliderVM
     [Required]
     public string Percent { get; set; }
     [Required]
-
     public IFormFile Photo { get; set; }
 
 }

@@ -1,0 +1,16 @@
+﻿@model UpdateAboutCompanySliderVM
+<div class="container">
+    <h1 class="text-center">Update About Us Page</h1>
+@*      <img src="~/images/@Model.Image" width="500px" height="500px"/>
+*@      <div class="row">
+          <form>
+                 <div class="form-group">
+                   <label>Video Image</label>
+                   <input asp-for="Photo" class="form-control">
+                 </div>
+                 <button type="submit" class="btn btn-outline-success me-2">Update</button>
+                 <input type="hidden" asp-for="Id"/>
+                 <button asp-action="Index" class="btn btn-outline-danger">Cancel</button>
+             </form>
+      </div>
+</div>

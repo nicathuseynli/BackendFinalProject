@@ -20,10 +20,12 @@ namespace Backend_Final_Project.Controllers
         {
             var sliders = await _context.Sliders.ToListAsync();
             var shippings = await _context.Shippings.ToListAsync();
+            var homeproductimg= await _context.HomeProducts.ToListAsync();
             HomeVM homevm = new HomeVM()
             {
                 Sliders = sliders,
                 Shippings = shippings,
+                HomeProducts= homeproductimg,
             };
             return View(homevm);
         }
