@@ -4,6 +4,16 @@ namespace Backend_Final_Project.ViewModels;
 public class HomeVM
 {
     public List<Slider> Sliders { get; set; }
+
     public List<Shipping> Shippings { get; set; }
+
     public List<HomeProduct> HomeProducts { get; set; }
+
+    public List<Blog> Blogs { get; set; }
+
+    public List<AboutCompanySlider> AboutCompanySliders { get; set; }
+
+    public Blog Blog { get; set; }
+
+    public List<Banner> Banner { get; set; }
 }

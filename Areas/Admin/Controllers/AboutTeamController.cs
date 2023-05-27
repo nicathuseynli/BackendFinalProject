@@ -141,6 +141,10 @@ public class AboutTeamController : Controller
             #endregion
 
         }
+        abouteam.Description = updateAboutTeamVM.Description;
+        abouteam.Name = updateAboutTeamVM.Name;
+        abouteam.Surname = updateAboutTeamVM.Surname;
+        abouteam.Profession = updateAboutTeamVM.Profession;
         await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
     }

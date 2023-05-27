@@ -19,12 +19,14 @@ namespace Backend_Final_Project.Controllers
             var companysliders = await _context.AboutCompanySliders.ToListAsync();
             var teammembers = await _context.AboutTeamMembers.ToListAsync();
             var membersingle = await _context.AboutTeamMembers.FirstOrDefaultAsync();
+            var shipping = await _context.Shippings.ToListAsync();
             AboutPageVM aboutpagevm = new AboutPageVM()
             {
                 AboutPages = aboutpages,  
                 AboutCompanySliders = companysliders,
                 AboutTeamMembers = teammembers,  
                 aboutTeam = membersingle,
+                Shippings = shipping,
             };
             return View(aboutpagevm);
         }

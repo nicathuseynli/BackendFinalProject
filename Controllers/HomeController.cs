@@ -20,12 +20,22 @@ namespace Backend_Final_Project.Controllers
         {
             var sliders = await _context.Sliders.ToListAsync();
             var shippings = await _context.Shippings.ToListAsync();
-            var homeproductimg= await _context.HomeProducts.ToListAsync();
+            var homeproductimages= await _context.HomeProducts.ToListAsync();
+            var blogs = await _context.Blogs.ToListAsync();
+            var aboutcompanysliders = await _context.AboutCompanySliders.ToListAsync();
+            var singleblog = await _context.Blogs.FirstOrDefaultAsync();
+            var banner = await _context.Banners.ToListAsync();
+            ViewBag.datetime = DateTime.Now.ToString("dd MMMM yyyy");
+
             HomeVM homevm = new HomeVM()
             {
                 Sliders = sliders,
                 Shippings = shippings,
-                HomeProducts= homeproductimg,
+                HomeProducts = homeproductimages,
+                Blogs = blogs,
+                Blog = singleblog,
+                AboutCompanySliders = aboutcompanysliders,
+                Banner = banner,
             };
             return View(homevm);
         }
