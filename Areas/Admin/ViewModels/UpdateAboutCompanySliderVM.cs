@@ -7,4 +7,6 @@ public class UpdateAboutCompanySliderVM
 
     [AllowNull]
     public IFormFile Photo { get; set; }
+ 
+    public string Image { get; set; }
 }

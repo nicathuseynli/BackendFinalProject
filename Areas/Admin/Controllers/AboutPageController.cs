@@ -117,24 +117,27 @@ public class AboutPageController : Controller
 
         if (updateAboutUsVM.Photo != null)
         {
-            if (updateAboutUsVM.Photo.ContentType.Contains("image/"))
+            #region Create NewImage
+            if (!updateAboutUsVM.Photo.ContentType.Contains("image/"))
                 return View();
 
-            if (updateAboutUsVM.Photo.Length / 1024 > 500)
+            if (updateAboutUsVM.Photo.Length / 1024 > 1000)
                 return View();
 
 
-            string filename = updateAboutUsVM.Photo.FileName + " _ " + Guid.NewGuid().ToString();
+            string filename = Guid.NewGuid().ToString() + " _ " + updateAboutUsVM.Photo.FileName;
             string path = Path.Combine(_webHostEnvironment.WebRootPath, "images", filename);
 
             using FileStream stream = new FileStream(path, FileMode.Create);
 
             await updateAboutUsVM.Photo.CopyToAsync(stream);
-
+            #endregion
+            #region DeleteOldImage
             string oldPath = Path.Combine(_webHostEnvironment.WebRootPath, "images", aboutus.Image);
             if (System.IO.File.Exists(oldPath))
                 System.IO.File.Delete(oldPath);
             aboutus.Image = filename;
+            #endregion
         }
 
         aboutus.Information = updateAboutUsVM.Information;

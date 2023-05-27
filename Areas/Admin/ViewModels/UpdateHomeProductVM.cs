@@ -9,8 +9,7 @@ public class UpdateHomeProductVM
     public decimal Price { get; set; }
 
     public decimal Rating { get; set; }
-
-    public IFormFile Photo { get; set; }
     [AllowNull]
+    public IFormFile Photo { get; set; }
     public string Image { get; set; }
 }

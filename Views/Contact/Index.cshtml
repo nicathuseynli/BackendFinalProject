@@ -1,4 +1,8 @@
-﻿  <!-- Begin Main Content Area -->
+﻿@model ContactInfo
+@{
+    ViewData["Title"] = "Contact Page";
+}    
+<!-- Begin Main Content Area -->
       <main class="main-content">
         <div
           class="breadcrumb-area breadcrumb-height"
@@ -31,21 +35,20 @@
                   >
                     <h2 class="contact-title">Contact Info:</h2>
                     <p class="contact-desc">
-                      Fill the form amd our teaam will get to back to you within
-                      24 hours.
+                       @Model.ContactDescription
                     </p>
                     <ul class="contact-list">
                       <li>
                         <i class="pe-7s-call"></i>
-                        <a href="tel://123-456-789">123 456 789</a>
+                        <a href="tel://@Model.PhoneNumber">@Model.PhoneNumber</a>
                       </li>
                       <li>
                         <i class="pe-7s-mail"></i>
-                        <a href="mailto://info@example.com">info@example.com</a>
+                        <a href="mailto://@Model.MailAddress">@Model.MailAddress</a>
                       </li>
                       <li>
                         <i class="pe-7s-map-marker"></i>
-                        <span>13, Your Address, Here</span>
+                        <span>@Model.Address</span>
                       </li>
                     </ul>
                   </div>

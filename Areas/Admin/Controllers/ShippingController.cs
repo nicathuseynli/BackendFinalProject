@@ -156,8 +156,6 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
                 updateshippings.Image = filename;
                 #endregion
             }
-
-
             updateshippings.Label = updateshippingsVM.Label;
             updateshippings.Description = updateshippingsVM.Description;
             await _context.SaveChangesAsync();

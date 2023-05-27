@@ -97,6 +97,7 @@ public class AboutCompanySliderController : Controller
         var updateCompanySlider = new UpdateAboutCompanySliderVM()
         {
             Id = companySlider.Id,
+            Image = companySlider.Image,
         };
         return View(updateCompanySlider);
 
@@ -111,24 +112,26 @@ public class AboutCompanySliderController : Controller
 
         if (updateAboutCompanySliderVM.Photo != null)
         {
-            if (updateAboutCompanySliderVM.Photo.ContentType.Contains("image/"))
+            if (!updateAboutCompanySliderVM.Photo.ContentType.Contains("image/"))
                 return View();
 
-            if (updateAboutCompanySliderVM.Photo.Length / 1024 > 500)
+            if (updateAboutCompanySliderVM.Photo.Length / 1024 > 1000)
                 return View();
 
 
-            string filename = updateAboutCompanySliderVM.Photo.FileName + " _ " + Guid.NewGuid().ToString();
+            string filename = Guid.NewGuid().ToString() + " _ " + updateAboutCompanySliderVM.Photo.FileName;
             string path = Path.Combine(_webHostEnvironment.WebRootPath, "images", filename);
 
             using FileStream stream = new FileStream(path, FileMode.Create);
 
             await updateAboutCompanySliderVM.Photo.CopyToAsync(stream);
+            #region Delete OldImage
 
             string oldPath = Path.Combine(_webHostEnvironment.WebRootPath, "images", companySlider.Image);
             if (System.IO.File.Exists(oldPath))
                 System.IO.File.Delete(oldPath);
             companySlider.Image = filename;
+           #endregion
         }
         await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));

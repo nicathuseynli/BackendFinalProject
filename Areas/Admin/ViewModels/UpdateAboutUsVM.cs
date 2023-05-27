@@ -12,9 +12,9 @@ public class UpdateAboutUsVM
 
     public string CenterTitle { get; set; }
 
-    public string Image { get; set; }
-
     [AllowNull]
     public IFormFile Photo { get; set; }
+
+    public string Image { get; set; }
 
 }

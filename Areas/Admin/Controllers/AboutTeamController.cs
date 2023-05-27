@@ -105,37 +105,41 @@ public class AboutTeamController : Controller
             Name = abouteam.Name,
             Surname = abouteam.Surname,
             Profession = abouteam.Profession,
+            Image=abouteam.Image,
         };
         return View(updateTeamMember);
     }
 
     [HttpPost]
-    public async Task<IActionResult> Update(UpdateAboutTeamVM UpdateAboutTeamVM)
+    public async Task<IActionResult> Update(UpdateAboutTeamVM updateAboutTeamVM)
     {
 
-        var abouteam = await _context.AboutTeamMembers.FirstOrDefaultAsync(x => x.Id == UpdateAboutTeamVM.Id);
+        var abouteam = await _context.AboutTeamMembers.FirstOrDefaultAsync(x => x.Id == updateAboutTeamVM.Id);
         if (abouteam == null) return NotFound();
 
-        if (UpdateAboutTeamVM.Photo != null)
+        if (updateAboutTeamVM.Photo != null)
         {
-            if (UpdateAboutTeamVM.Photo.ContentType.Contains("image/"))
+            #region Create NewImage
+            if (!updateAboutTeamVM.Photo.ContentType.Contains("image/"))
                 return View();
 
-            if (UpdateAboutTeamVM.Photo.Length / 1024 > 500)
+            if (updateAboutTeamVM.Photo.Length / 1024 > 1000)
                 return View();
 
-
-            string filename = UpdateAboutTeamVM.Photo.FileName + " _ " + Guid.NewGuid().ToString();
+            string filename = Guid.NewGuid().ToString() + " _ " + updateAboutTeamVM.Photo.FileName;
             string path = Path.Combine(_webHostEnvironment.WebRootPath, "images", filename);
 
             using FileStream stream = new FileStream(path, FileMode.Create);
 
-            await UpdateAboutTeamVM.Photo.CopyToAsync(stream);
-
+            await updateAboutTeamVM.Photo.CopyToAsync(stream);
+            #endregion
+            #region DeleteOldImage
             string oldPath = Path.Combine(_webHostEnvironment.WebRootPath, "images", abouteam.Image);
             if (System.IO.File.Exists(oldPath))
                 System.IO.File.Delete(oldPath);
             abouteam.Image = filename;
+            #endregion
+
         }
         await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));

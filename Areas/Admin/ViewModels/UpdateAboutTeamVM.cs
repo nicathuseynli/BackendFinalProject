@@ -13,8 +13,9 @@ public class UpdateAboutTeamVM
 
     public string Profession { get; set; }
 
-
     [AllowNull]
     public IFormFile Photo { get; set; }
+
+    public string Image { get; set; }
 
 }
