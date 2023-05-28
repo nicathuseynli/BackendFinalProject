@@ -8,7 +8,7 @@
         <!-- Main Slider -->
         <div class="swiper-container main-slider swiper-arrow with-bg_white">
           <div class="swiper-wrapper">
-             @foreach (var slider in @Model.Sliders)
+             @foreach (var slider in Model.Sliders)
             {    
             <div class="swiper-slide animation-style-01">
               <div
@@ -67,7 +67,7 @@
         <div class="container">
           <div class="shipping-bg">
             <div class="row shipping-wrap">
-                @foreach (var shipping in @Model.Shippings)
+                @foreach (var shipping in Model.Shippings)
                 {
                     <div class="col-lg-4 col-md-6">
                 <div class="shipping-item">
@@ -2147,14 +2147,14 @@
               <div class="banner-item img-hover-effect">
                 <div class="banner-img">
                   <img
-                    src="~/images/@Model.Banner[0].BannerImage"
+                    src="~/images/@Model.Baners[0].BannerImage"
                     alt="Banner Image"
                   />
                 </div>
                 <div class="banner-content text-position-left">
-                  <span class="collection">@Model.Banner[0].Title</span>
+                  <span class="collection">@Model.Baners[0].Title</span>
                   <h3 class="title">
-                    @Model.Banner[0].Description
+                    @Model.Baners[0].Description
                   </h3>
                   <div class="button-wrap">
                     <a
@@ -2169,14 +2169,14 @@
               <div class="banner-item img-hover-effect">
                 <div class="banner-img">
                   <img
-                    src="~/images/@Model.Banner[1].BannerImage"
+                    src="~/images/@Model.Baners[1].BannerImage"
                     alt="Banner Image"
                   />
                 </div>
                 <div class="banner-content text-position-center">
-                        <span class="collection">@Model.Banner[1].Title</span>
+                        <span class="collection">@Model.Baners[1].Title</span>
                         <h3 class="title">
-                            @Model.Banner[1].Description
+                            @Model.Baners[1].Description
                         </h3>
                   <div class="button-wrap">
                     <a
@@ -2190,13 +2190,13 @@
             <div class="col-lg-4 col-md-6">
                 <div class="banner-item img-hover-effect">
                     <div class="banner-img">
-                        <img src="~/images/@Model.Banner[2].BannerImage"
+                        <img src="~/images/@Model.Baners[2].BannerImage"
                              alt="Banner Image" />
                     </div>
                     <div class="banner-content text-position-center">
-                        <span class="collection">@Model.Banner[2].Title</span>
+                        <span class="collection">@Model.Baners[2].Title</span>
                         <h3 class="title">
-                            @Model.Banner[2].Description
+                            @Model.Baners[2].Description
                         </h3>
                         <div class="button-wrap">
                             <a class="btn btn-custom-size lg-size btn-pronia-primary"
@@ -2208,13 +2208,13 @@
             <div class="col-lg-8">
                 <div class="banner-item img-hover-effect">
                     <div class="banner-img">
-                        <img src="~/images/@Model.Banner[3].BannerImage"
+                        <img src="~/images/@Model.Baners[3].BannerImage"
                              alt="Banner Image" />
                     </div>
                     <div class="banner-content text-position-left">
-                        <span class="collection">@Model.Banner[3].Title</span>
+                        <span class="collection">@Model.Baners[3].Title</span>
                         <h3 class="title">
-                            @Model.Banner[3].Description
+                            @Model.Baners[3].Description
                         </h3>
                         <div class="button-wrap">
                             <a class="btn btn-custom-size btn-pronia-primary"
@@ -2242,17 +2242,20 @@
             <div class="col-lg-12">
               <div class="swiper-container product-slider">
                 <div class="swiper-wrapper">
+                    @foreach (var newproduct in Model.NewProducts)
+                        {
+                            
                   <div class="swiper-slide product-item">
                     <div class="product-img">
-                      <a asp-controller="Shop" asp-action="Index"shop.html">
+                      <a asp-controller="Shop" asp-action="Index">
                         <img
                           class="primary-img"
-                          src="~/images/website-images//1-9-270x300.jpg"
+                          src="~/images/@newproduct.ProductImg"
                           alt="Product Images"
                         />
                         <img
                           class="secondary-img"
-                          src="~/images/website-images//1-10-270x300.jpg"
+                          src="~/images/@newproduct.HoverImg"
                           alt="Product Images"
                         />
                      </a>
@@ -2260,7 +2263,7 @@
                         <ul>
                           <li>
                             <a
-                              asp-controller="Shop" asp-action="Index"wishlist.html"
+                              asp-controller="Shop" asp-action="Index"
                               data-tippy="Add to wishlist"
                               data-tippy-inertia="true"
                               data-tippy-animation="shift-away"
@@ -2277,7 +2280,7 @@
                             data-bs-target="#quickModal"
                           >
                             <a
-                              asp-controller="Shop" asp-action="Index"#"
+                              asp-controller="Shop" asp-action="Index"
                               data-tippy="Quickview"
                               data-tippy-inertia="true"
                               data-tippy-animation="shift-away"
@@ -2290,7 +2293,7 @@
                           </li>
                           <li>
                             <a
-                              asp-controller="Shop" asp-action="Index"cart.html"
+                              asp-controller="Shop" asp-action="Index"
                               data-tippy="Add to cart"
                               data-tippy-inertia="true"
                               data-tippy-animation="shift-away"
@@ -2305,263 +2308,24 @@
                       </div>
                     </div>
                     <div class="product-content">
-                      <a class="product-name" asp-controller="Shop" asp-action="Index"shop.html"
-                        >American Marigold</a>
+                      <a class="product-name" asp-controller="Shop" asp-action="Index"
+                        >@newproduct.Name</a>
                       
                       <div class="price-box pb-1">
-                        <span class="new-price">$23.45</span>
+                        <span class="new-price">$@newproduct.Price</span>
                       </div>
                       <div class="rating-box">
                         <ul>
+                           @for (int i = 0; i < newproduct.Rating; i++)
+                                            {
                           <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
+                                                
+                                            }
                         </ul>
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-slide product-item">
-                    <div class="product-img">
-                      <a asp-controller="Shop" asp-action="Index"shop.html">
-                        <img
-                          class="primary-img"
-                          src="~/images/website-images//1-10-270x300.jpg"
-                          alt="Product Images"
-                        />
-                        <img
-                          class="secondary-img"
-                          src="~/images/website-images//1-11-270x300.jpg"
-                          alt="Product Images"
-                        />
-                     </a>
-                      <div class="product-add-action">
-                        <ul>
-                          <li>
-                            <a
-                              asp-controller="Shop" asp-action="Index"wishlist.html"
-                              data-tippy="Add to wishlist"
-                              data-tippy-inertia="true"
-                              data-tippy-animation="shift-away"
-                              data-tippy-delay="50"
-                              data-tippy-arrow="true"
-                              data-tippy-theme="sharpborder"
-                            >
-                              <i class="pe-7s-like"></i>
-                           </a>
-                          </li>
-                          <li
-                            class="quuickview-btn"
-                            data-bs-toggle="modal"
-                            data-bs-target="#quickModal"
-                          >
-                            <a
-                              asp-controller="Shop" asp-action="Index"#"
-                              data-tippy="Quickview"
-                              data-tippy-inertia="true"
-                              data-tippy-animation="shift-away"
-                              data-tippy-delay="50"
-                              data-tippy-arrow="true"
-                              data-tippy-theme="sharpborder"
-                            >
-                              <i class="pe-7s-look"></i>
-                           </a>
-                          </li>
-                          <li>
-                            <a
-                              asp-controller="Shop" asp-action="Index"cart.html"
-                              data-tippy="Add to cart"
-                              data-tippy-inertia="true"
-                              data-tippy-animation="shift-away"
-                              data-tippy-delay="50"
-                              data-tippy-arrow="true"
-                              data-tippy-theme="sharpborder"
-                            >
-                              <i class="pe-7s-cart"></i>
-                           </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="product-content">
-                      <a class="product-name" asp-controller="Shop" asp-action="Index"shop.html"
-                        >Black Eyed Susan</a>
-                      
-                      <div class="price-box pb-1">
-                        <span class="new-price">$25.45</span>
-                      </div>
-                      <div class="rating-box">
-                        <ul>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide product-item">
-                    <div class="product-img">
-                      <a asp-controller="Shop" asp-action="Index"shop.html">
-                        <img
-                          class="primary-img"
-                          src="~/images/website-images//1-11-270x300.jpg"
-                          alt="Product Images"
-                        />
-                        <img
-                          class="secondary-img"
-                          src="~/images/website-images//1-4-270x300.jpg"
-                          alt="Product Images"
-                        />
-                     </a>
-                      <div class="product-add-action">
-                        <ul>
-                          <li>
-                            <a
-                              asp-controller="Shop" asp-action="Index"wishlist.html"
-                              data-tippy="Add to wishlist"
-                              data-tippy-inertia="true"
-                              data-tippy-animation="shift-away"
-                              data-tippy-delay="50"
-                              data-tippy-arrow="true"
-                              data-tippy-theme="sharpborder"
-                            >
-                              <i class="pe-7s-like"></i>
-                           </a>
-                          </li>
-                          <li
-                            class="quuickview-btn"
-                            data-bs-toggle="modal"
-                            data-bs-target="#quickModal"
-                          >
-                            <a
-                              asp-controller="Shop" asp-action="Index"#"
-                              data-tippy="Quickview"
-                              data-tippy-inertia="true"
-                              data-tippy-animation="shift-away"
-                              data-tippy-delay="50"
-                              data-tippy-arrow="true"
-                              data-tippy-theme="sharpborder"
-                            >
-                              <i class="pe-7s-look"></i>
-                           </a>
-                          </li>
-                          <li>
-                            <a
-                              asp-controller="Shop" asp-action="Index"cart.html"
-                              data-tippy="Add to cart"
-                              data-tippy-inertia="true"
-                              data-tippy-animation="shift-away"
-                              data-tippy-delay="50"
-                              data-tippy-arrow="true"
-                              data-tippy-theme="sharpborder"
-                            >
-                              <i class="pe-7s-cart"></i>
-                           </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="product-content">
-                      <a class="product-name" asp-controller="Shop" asp-action="Index"shop.html"
-                        >Bleeding Heart</a>
-                      
-                      <div class="price-box pb-1">
-                        <span class="new-price">$30.45</span>
-                      </div>
-                      <div class="rating-box">
-                        <ul>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide product-item">
-                    <div class="product-img">
-                      <a asp-controller="Shop" asp-action="Index"shop.html">
-                        <img
-                          class="primary-img"
-                          src="~/images/website-images//1-7-270x300.jpg"
-                          alt="Product Images"
-                        />
-                        <img
-                          class="secondary-img"
-                          src="~/images/website-images//1-8-270x300.jpg"
-                          alt="Product Images"
-                        />
-                     </a>
-                      <div class="product-add-action">
-                        <ul>
-                          <li>
-                            <a
-                              asp-controller="Shop" asp-action="Index"wishlist.html"
-                              data-tippy="Add to wishlist"
-                              data-tippy-inertia="true"
-                              data-tippy-animation="shift-away"
-                              data-tippy-delay="50"
-                              data-tippy-arrow="true"
-                              data-tippy-theme="sharpborder"
-                            >
-                              <i class="pe-7s-like"></i>
-                           </a>
-                          </li>
-                          <li
-                            class="quuickview-btn"
-                            data-bs-toggle="modal"
-                            data-bs-target="#quickModal"
-                          >
-                            <a
-                              asp-controller="Shop" asp-action="Index"#"
-                              data-tippy="Quickview"
-                              data-tippy-inertia="true"
-                              data-tippy-animation="shift-away"
-                              data-tippy-delay="50"
-                              data-tippy-arrow="true"
-                              data-tippy-theme="sharpborder"
-                            >
-                              <i class="pe-7s-look"></i>
-                           </a>
-                          </li>
-                          <li>
-                            <a
-                              asp-controller="Shop" asp-action="Index"cart.html"
-                              data-tippy="Add to cart"
-                              data-tippy-inertia="true"
-                              data-tippy-animation="shift-away"
-                              data-tippy-delay="50"
-                              data-tippy-arrow="true"
-                              data-tippy-theme="sharpborder"
-                            >
-                              <i class="pe-7s-cart"></i>
-                           </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="product-content">
-                      <a class="product-name" asp-controller="Shop" asp-action="Index"shop.html"
-                        >Bloody Cranesbill</a>
-                      
-                      <div class="price-box pb-1">
-                        <span class="new-price">$45.00</span>
-                      </div>
-                      <div class="rating-box">
-                        <ul>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                          <li><i class="fa fa-star"></i></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
+                        }
                 </div>
               </div>
             </div>
@@ -2581,75 +2345,40 @@
           >
             <div class="section-title-wrap">
               <h2 class="section-title">What Say Client</h2>
+              @foreach (var info in @Model.Testimonials)
+                {
               <p class="section-desc mb-0">
-                Contrary to popular belief, Lorem Ipsum is not simply random
-                text. It has roots in a piece of classical Latin literature
-              </p>
+               @info.Information
+              </p>                  
+                }
             </div>
           </div>
           <div class="container custom-space">
             <div class="swiper-container testimonial-slider with-bg">
               <div class="swiper-wrapper">
-                <div class="swiper-slide testimonial-item">
+                    @foreach (var testimonial in @Model.Testimonials)
+                        {
+               <div class="swiper-slide testimonial-item">
                   <div class="user-info mb-3">
                     <div class="user-shape-wrap">
                       <div class="user-img">
                         <img
-                          src="~/images/website-images//1--1rnu4p.png"
+                          src="~/images/@testimonial.ClientImage"
                           alt="User Image"
                         />
                       </div>
                     </div>
                     <div class="user-content text-charcoal">
-                      <h4 class="user-name mb-1">Phoenix Baker</h4>
-                      <span class="user-occupation">Client</span>
+                      <h4 class="user-name mb-1">@testimonial.FullName</h4>
+                      <span class="user-occupation">@testimonial.Profession</span>
                     </div>
                   </div>
                   <p class="user-comment mb-6">
-                    Lorem ipsum dolor sit amet, conse adipisic elit, sed do
-                    eiusmod tempo incididunt ut labore et dolore. magna
+                   @testimonial.Comment
                   </p>
                 </div>
-                <div class="swiper-slide testimonial-item">
-                  <div class="user-info mb-3">
-                    <div class="user-shape-wrap">
-                      <div class="user-img">
-                        <img
-                          src="~/images/website-images//2.png"
-                          alt="User Image"
-                        />
-                      </div>
-                    </div>
-                    <div class="user-content text-charcoal">
-                      <h4 class="user-name mb-1">Phoenix Baker</h4>
-                      <span class="user-occupation">Client</span>
-                    </div>
-                  </div>
-                  <p class="user-comment mb-6">
-                    Lorem ipsum dolor sit amet, conse adipisic elit, sed do
-                    eiusmod tempo incididunt ut labore et dolore. magna
-                  </p>
-                </div>
-                <div class="swiper-slide testimonial-item">
-                  <div class="user-info mb-3">
-                    <div class="user-shape-wrap">
-                      <div class="user-img">
-                        <img
-                          src="~/images/website-images//3.png"
-                          alt="User Image"
-                        />
-                      </div>
-                    </div>
-                    <div class="user-content text-charcoal">
-                      <h4 class="user-name mb-1">Phoenix Baker</h4>
-                      <span class="user-occupation">Client</span>
-                    </div>
-                  </div>
-                  <p class="user-comment mb-6">
-                    Lorem ipsum dolor sit amet, conse adipisic elit, sed do
-                    eiusmod tempo incididunt ut labore et dolore. magna
-                  </p>
-                </div>
+                        }
+              
               </div>
               <!-- Add Pagination -->
               <div class="swiper-pagination without-absolute"></div>

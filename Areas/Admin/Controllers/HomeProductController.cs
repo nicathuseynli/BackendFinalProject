@@ -53,7 +53,6 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
 
             HomeProduct homeproduct = new()
             {
-                Id = createhomeproductVm.Id,
                 Name = createhomeproductVm.Name,
                 Rating = createhomeproductVm.Rating,
                 Price = createhomeproductVm.Price,
@@ -106,6 +105,7 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
 
             var updateHomeProductVM = new UpdateHomeProductVM()
             {
+                Id = id,
                 Name = homeproduct.Name,
                 Price = homeproduct.Price,
                 Rating = homeproduct.Rating,
@@ -132,7 +132,7 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
                     return View();
 
 
-                string filename = updateHomeProductVM.Photo.FileName + " _ " + Guid.NewGuid().ToString();
+                string filename = Guid.NewGuid().ToString() + " _ " + updateHomeProductVM.Photo.FileName ;
                 string path = Path.Combine(_environment.WebRootPath, "images", filename);
 
                 using FileStream stream = new FileStream(path, FileMode.Create);

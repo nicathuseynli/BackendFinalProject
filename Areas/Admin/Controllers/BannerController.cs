@@ -16,14 +16,11 @@ public class BannerController : Controller
         _context = context;
         _webHostEnvironment = webHostEnvironment;
     }
-
-
     public async Task<IActionResult> Index()
     {
         var banner = await _context.Banners.ToListAsync();
         return View(banner);
     }
-
     [HttpGet]
     public IActionResult Create()
     {
@@ -52,7 +49,6 @@ public class BannerController : Controller
 
         Banner banner = new()
         {
-            Id = createbannerVM.Id,
             Description = createbannerVM.Description,
             Title = createbannerVM.Title,
             BannerImage = filename
@@ -60,7 +56,6 @@ public class BannerController : Controller
         await _context.Banners.AddAsync(banner);
         await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
-
     }
     [HttpGet]
     public async Task<IActionResult> Details(int id)
@@ -73,7 +68,6 @@ public class BannerController : Controller
     [HttpPost]
     public async Task<IActionResult> Delete(int id)
     {
-
         var banner = await _context.Banners.FirstOrDefaultAsync(x => x.Id == id);
         if (banner == null)
             return View();
@@ -88,7 +82,6 @@ public class BannerController : Controller
         _context.Banners.Remove(banner);
         await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
-
     }
 
     [HttpGet]

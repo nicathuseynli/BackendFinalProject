@@ -19,6 +19,8 @@ namespace Backend_Final_Project.Data
         public DbSet<ContactInfo> ContactInformations { get; set; }
         public DbSet<Banner> Banners { get; set; }
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Testimonial> Testimonials { get; set; }
+        public DbSet<NewProduct> NewProducts { get; set; }
     }
 }
 

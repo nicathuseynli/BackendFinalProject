@@ -3,7 +3,6 @@
 namespace Backend_Final_Project.Areas.Admin.ViewModels;
 public class CreateAboutUsVM
 {
-    public int Id { get; set; }
     [Required]
     public string Information { get; set; }
     [Required]

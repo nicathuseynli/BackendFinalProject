@@ -3,7 +3,6 @@
 namespace Backend_Final_Project.Areas.Admin.ViewModels;
 public class CreateBlogVM
 {
-    public int Id { get; set; }
 
     public string BlogDescription { get; set; }
 

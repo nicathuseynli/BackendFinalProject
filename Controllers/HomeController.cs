@@ -24,7 +24,9 @@ namespace Backend_Final_Project.Controllers
             var blogs = await _context.Blogs.ToListAsync();
             var aboutcompanysliders = await _context.AboutCompanySliders.ToListAsync();
             var singleblog = await _context.Blogs.FirstOrDefaultAsync();
-            var banner = await _context.Banners.ToListAsync();
+            var baner = await _context.Banners.ToListAsync();
+            var testimonial = await _context.Testimonials.ToListAsync();
+            var newproduct = await _context.NewProducts.ToListAsync();
             ViewBag.datetime = DateTime.Now.ToString("dd MMMM yyyy");
 
             HomeVM homevm = new HomeVM()
@@ -35,7 +37,9 @@ namespace Backend_Final_Project.Controllers
                 Blogs = blogs,
                 Blog = singleblog,
                 AboutCompanySliders = aboutcompanysliders,
-                Banner = banner,
+                Testimonials = testimonial,
+                NewProducts = newproduct,
+                Baners = baner,
             };
             return View(homevm);
         }

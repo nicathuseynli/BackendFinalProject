@@ -52,7 +52,6 @@ public class BlogController : Controller
 
         Blog blog = new()
         {
-            Id = createblogVM.Id,
             ByPerson = createblogVM.ByPerson,
             BlogDescription = createblogVM.BlogDescription,
             BlogInformation = createblogVM.BlogInformation,

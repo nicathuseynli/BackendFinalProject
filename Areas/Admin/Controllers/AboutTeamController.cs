@@ -51,7 +51,6 @@ public class AboutTeamController : Controller
 
         AboutTeam abouteam = new()
         {
-            Id = createAboutTeamVM.Id,
             Description = createAboutTeamVM.Description,
             Name = createAboutTeamVM.Name,
             Surname = createAboutTeamVM.Surname,

@@ -78,7 +78,6 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
             if (sliderCount <= 2)
                 return RedirectToAction(nameof(Index));
 
-
             var slider = await _context.Sliders.FirstOrDefaultAsync(x => x.Id == id);
             if (slider == null)
                 return View();

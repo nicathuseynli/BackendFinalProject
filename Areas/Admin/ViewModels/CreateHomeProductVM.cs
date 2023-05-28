@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Backend_Final_Project.Areas.Admin.ViewModels;
 public class CreateHomeProductVM
 {
-    public int Id { get; set; }
     [Required]
     public string Name { get; set; }
     [Required]
