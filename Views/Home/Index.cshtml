@@ -2233,11 +2233,11 @@
         <div class="container">
           <div class="row">
             <div class="section-title-wrap without-tab">
-              <h2 class="section-title">New Products</h2>
+              <h2 class="section-title">New Products</h2>  
               <p class="section-desc">
-                Contrary to popular belief, Lorem Ipsum is not simply random
-                text. It has roots in a piece of classical Latin literature
+               @Model.HomeDescriptions.NewProductInfo 
               </p>
+            
             </div>
             <div class="col-lg-12">
               <div class="swiper-container product-slider">
@@ -2345,18 +2345,16 @@
           >
             <div class="section-title-wrap">
               <h2 class="section-title">What Say Client</h2>
-              @foreach (var info in @Model.Testimonials)
-                {
               <p class="section-desc mb-0">
-               @info.Information
+                  @Model.HomeDescriptions.TestimonialInfo
               </p>                  
-                }
+
             </div>
           </div>
           <div class="container custom-space">
             <div class="swiper-container testimonial-slider with-bg">
               <div class="swiper-wrapper">
-                    @foreach (var testimonial in @Model.Testimonials)
+                    @foreach (var testimonial in Model.Testimonials)
                         {
                <div class="swiper-slide testimonial-item">
                   <div class="user-info mb-3">
@@ -2417,17 +2415,17 @@
             </div>
           </div>
         </div>
-        <!-- Brand Area End Here -->
-   <!-- Begin Blog Area -->
+     <!-- Brand Area End Here -->
+
+     <!-- Begin Blog Area -->
       <div class="blog-area section-space-bottom-100">
         <div class="container">
           <div class="section-title-wrap">
-            <h2 class="section-title mb-7">Latest Blog</h2>
+            <h2 class="section-title mb-7">Latest Blog</h2>            
             <p class="section-desc">
-              @Model.Blog.BlogDescription
-            </p>
+             @Model.HomeDescriptions.BlogInfo
+            </p> 
           </div>
- 
         <div class="row">
             <div class="col-lg-12">
                 <div class="swiper-container blog-slider">
@@ -2476,4 +2474,4 @@
         </div>
         </div>
       </div>
-      <!-- Blog Area End Here -->
+     <!-- Blog Area End Here -->

@@ -133,10 +133,6 @@ namespace Backend_Final_Project.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("BlogDescription")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("BlogImage")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -211,6 +207,31 @@ namespace Backend_Final_Project.Migrations
                     b.ToTable("HomeCategories");
                 });
 
+            modelBuilder.Entity("Backend_Final_Project.Models.HomeDescription", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("BlogInfo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NewProductInfo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TestimonialInfo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HomeDescriptions");
+                });
+
             modelBuilder.Entity("Backend_Final_Project.Models.HomeProduct", b =>
                 {
                     b.Property<int>("Id")
@@ -277,6 +298,26 @@ namespace Backend_Final_Project.Migrations
                     b.ToTable("NewProducts");
                 });
 
+            modelBuilder.Entity("Backend_Final_Project.Models.QuickLink", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TelephoneNumber")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("QuickLinks");
+                });
+
             modelBuilder.Entity("Backend_Final_Project.Models.Shipping", b =>
                 {
                     b.Property<int>("Id")
@@ -336,6 +377,35 @@ namespace Backend_Final_Project.Migrations
                     b.ToTable("Sliders");
                 });
 
+            modelBuilder.Entity("Backend_Final_Project.Models.SocialMediaAdress", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("DribbbleLink")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FacebookLink")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PinterestLink")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TwitterLink")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SocialMediaAdresses");
+                });
+
             modelBuilder.Entity("Backend_Final_Project.Models.Testimonial", b =>
                 {
                     b.Property<int>("Id")
@@ -353,10 +423,6 @@ namespace Backend_Final_Project.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Information")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

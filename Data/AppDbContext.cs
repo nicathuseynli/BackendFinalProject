@@ -21,6 +21,9 @@ namespace Backend_Final_Project.Data
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<NewProduct> NewProducts { get; set; }
+        public DbSet<HomeDescription> HomeDescriptions { get; set; }
+        public DbSet<QuickLink> QuickLinks { get; set; }
+        public DbSet<SocialMediaAdress> SocialMediaAdresses { get; set; }
     }
 }
 

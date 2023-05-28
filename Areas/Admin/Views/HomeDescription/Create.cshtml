@@ -1,0 +1,19 @@
+﻿@model CreateHomeDescriptionVM
+<div class="container">
+    <h1 class="text-center">Create Home Product</h1>
+      <div class="row">
+             <form asp-action="Create" method="post" class="forms-sample" enctype="multipart/form-data">
+                 <div class="form-group">
+                   <input asp-for="NewProductInfo" class="form-control" placeholder="NewProductInfo">
+                 </div>  
+                 <div class="form-group">
+                   <input asp-for="TestimonialInfo" class="form-control" placeholder="TestimonialInfo">
+                 </div>  
+                 <div class="form-group">
+                   <input asp-for="BlogInfo" class="form-control" placeholder="BlogInfo">
+                 </div>
+                 <button type="submit" class="btn btn-outline-success me-2">Create</button>
+                 <button asp-action="Index" class="btn btn-outline-danger">Cancel</button>
+             </form>
+    </div>
+</div>

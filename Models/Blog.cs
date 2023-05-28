@@ -3,8 +3,6 @@
 namespace Backend_Final_Project.Models;
 public class Blog : BaseEntity<int>
 {
-    public string BlogDescription { get; set; }
-
     public string ByPerson { get; set; }
 
     public string BlogTitle { get; set; }

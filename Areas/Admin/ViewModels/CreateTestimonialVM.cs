@@ -3,9 +3,6 @@
 namespace Backend_Final_Project.Areas.Admin.ViewModels;
 public class CreateTestimonialVM
 {
-
-    public string Information { get; set; }
-
     [Required]
     public string FullName { get; set; }
 

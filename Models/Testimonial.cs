@@ -3,8 +3,6 @@
 namespace Backend_Final_Project.Models;
 public class Testimonial : BaseEntity<int>
 {
-    public string Information { get; set; }
-
     public string FullName { get; set; }
 
     public string ClientImage { get; set; }

@@ -53,7 +53,6 @@ public class BlogController : Controller
         Blog blog = new()
         {
             ByPerson = createblogVM.ByPerson,
-            BlogDescription = createblogVM.BlogDescription,
             BlogInformation = createblogVM.BlogInformation,
             BlogTitle = createblogVM.BlogTitle,
             BlogImage = filename
@@ -101,7 +100,6 @@ public class BlogController : Controller
         var updateBlog = new UpdateBlogVM()
         {
             Id = blog.Id,
-            BlogDescription = blog.BlogDescription,
             BlogInformation = blog.BlogInformation,
             BlogTitle = blog.BlogTitle,
             ByPerson = blog.ByPerson,
@@ -141,7 +139,6 @@ public class BlogController : Controller
             blog.BlogImage = filename;
             #endregion
         }
-        blog.BlogDescription = updateBlogVM.BlogDescription;
         blog.BlogInformation = updateBlogVM.BlogInformation;
         blog.BlogTitle = updateBlogVM.BlogTitle;
         blog.ByPerson = updateBlogVM.ByPerson;

@@ -5,8 +5,6 @@ public class UpdateBlogVM
 {
     public int Id { get; set; }
 
-    public string BlogDescription { get; set; }
-
     public string ByPerson { get; set; }
 
     public string BlogTitle { get; set; }

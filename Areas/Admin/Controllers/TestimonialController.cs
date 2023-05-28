@@ -50,7 +50,6 @@ public class TestimonialController : Controller
 
         Testimonial testimonial = new()
         {
-            Information = createTestimonialVm.Information,
             Comment = createTestimonialVm.Comment,
             FullName = createTestimonialVm.FullName,
             Profession = createTestimonialVm.Profession,
@@ -99,7 +98,6 @@ public class TestimonialController : Controller
             Id = id,
             Profession = testimonial.Profession,
             FullName = testimonial.FullName,
-            Information = testimonial.Information,
             Comment = testimonial.Comment,
             ClientImage = testimonial.ClientImage,
         };
@@ -134,7 +132,6 @@ public class TestimonialController : Controller
             testimonial.ClientImage = filename;
         }
 
-        testimonial.Information = updateTestimonialVM.Information;
         testimonial.Comment = updateTestimonialVM.Comment;
         testimonial.Profession = updateTestimonialVM.Profession;
         testimonial.FullName = updateTestimonialVM.FullName;

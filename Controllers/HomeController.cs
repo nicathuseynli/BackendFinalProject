@@ -27,19 +27,21 @@ namespace Backend_Final_Project.Controllers
             var baner = await _context.Banners.ToListAsync();
             var testimonial = await _context.Testimonials.ToListAsync();
             var newproduct = await _context.NewProducts.ToListAsync();
+            var description = await _context.HomeDescriptions.FirstOrDefaultAsync();
             ViewBag.datetime = DateTime.Now.ToString("dd MMMM yyyy");
 
             HomeVM homevm = new HomeVM()
             {
+                Blog = singleblog,
                 Sliders = sliders,
                 Shippings = shippings,
                 HomeProducts = homeproductimages,
                 Blogs = blogs,
-                Blog = singleblog,
                 AboutCompanySliders = aboutcompanysliders,
                 Testimonials = testimonial,
                 NewProducts = newproduct,
                 Baners = baner,
+                HomeDescriptions = description,
             };
             return View(homevm);
         }
