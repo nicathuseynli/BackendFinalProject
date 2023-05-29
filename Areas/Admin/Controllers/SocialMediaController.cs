@@ -31,7 +31,6 @@ public class SocialMediaController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(CreateSocialMediaVM createSocialMediaVM)
     {
-
         SocialMediaAdress socialmedia = new()
         {
             FacebookLink = createSocialMediaVM.FacebookLink,

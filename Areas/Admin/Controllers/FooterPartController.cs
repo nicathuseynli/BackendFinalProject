@@ -6,12 +6,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Backend_Final_Project.Areas.Admin.Controllers;
 [Area("Admin")]
-public class QuickLinkController : Controller
+public class FooterPartController : Controller
 {
     private readonly AppDbContext _context;
     private readonly IWebHostEnvironment _webHostEnvironment;
 
-    public QuickLinkController(AppDbContext context, IWebHostEnvironment webHostEnvironment)
+    public FooterPartController(AppDbContext context, IWebHostEnvironment webHostEnvironment)
     {
         _context = context;
        _webHostEnvironment = webHostEnvironment;

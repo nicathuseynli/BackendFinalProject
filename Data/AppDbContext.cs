@@ -1,11 +1,12 @@
 ﻿using Backend_Final_Project.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Backend_Final_Project.Data
 {
-    public class AppDbContext:DbContext
+    public class AppDbContext:IdentityDbContext<AppUser>
     {
-        public AppDbContext(DbContextOptions options) : base(options)
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
 
         }
@@ -24,6 +25,13 @@ namespace Backend_Final_Project.Data
         public DbSet<HomeDescription> HomeDescriptions { get; set; }
         public DbSet<QuickLink> QuickLinks { get; set; }
         public DbSet<SocialMediaAdress> SocialMediaAdresses { get; set; }
+        public DbSet<HeaderPhoneNumber> HeaderPhoneNumbers { get; set; }
+        public DbSet<HeaderInfo> HeaderInfos { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
     }
 }
 

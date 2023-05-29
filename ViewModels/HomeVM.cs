@@ -22,4 +22,5 @@ public class HomeVM
     public HomeDescription HomeDescriptions { get; set; }
 
     public List<Banner> Baners { get; set; }
+ 
 }

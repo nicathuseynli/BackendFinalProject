@@ -1,4 +1,6 @@
-﻿      <!-- Begin Main Content Area -->
+﻿@using Backend_Final_Project.ViewModels.Account
+@model LoginRegisterVM  
+   <!-- Begin Main Content Area -->
       <main class="main-content">
         <div
           class="breadcrumb-area breadcrumb-height"
@@ -24,17 +26,17 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-6">
-                <form action="#">
+                <form method="post" asp-controller="LoginRegister" asp-action="Login">
                   <div class="login-form">
                     <h4 class="login-title">Login</h4>
                     <div class="row">
                       <div class="col-lg-12">
                         <label>Email Address*</label>
-                        <input type="email" placeholder="Email Address" />
+                        <input asp-for="loginVM.EmailAddress" placeholder="Email Address" />
                       </div>
                       <div class="col-lg-12">
                         <label>Password</label>
-                        <input type="password" placeholder="Password" />
+                        <input asp-for="loginVM.Password" placeholder="Password" />
                       </div>
                       <div class="col-md-8">
                         <div class="check-box">
@@ -44,7 +46,7 @@
                       </div>
                       <div class="col-md-4 pt-1 mt-md-0">
                         <div class="forgotton-password_info">
-                          <a href="#"> Forgotten pasward?</a>
+                          <a asp-controller="LoginRegister" asp-action="Index"> Forgotten pasward?</a>
                         </div>
                       </div>
                       <div class="col-lg-12 pt-5">
@@ -59,34 +61,33 @@
                 </form>
               </div>
               <div class="col-lg-6 pt-5 pt-lg-0">
-                <form action="#">
+                <form method="post" asp-controller="LoginRegister" asp-action="Register">
                   <div class="login-form">
                     <h4 class="login-title">Register</h4>
                     <div class="row">
                       <div class="col-md-6 col-12">
-                        <label>First Name</label>
-                        <input type="text" placeholder="First Name" />
+                        <label> Name</label>
+                        <input asp-for="registerVM.FirstName" placeholder="First Name" />
                       </div>
                       <div class="col-md-6 col-12">
                         <label>Last Name</label>
-                        <input type="text" placeholder="Last Name" />
+                        <input  asp-for="registerVM.LastName" placeholder="Last Name" />
                       </div>
                       <div class="col-md-12">
                         <label>Email Address*</label>
-                        <input type="email" placeholder="Email Address" />
+                        <input  asp-for="registerVM.Email" placeholder="Email Address" />
                       </div>
                       <div class="col-md-6">
                         <label>Password</label>
-                        <input type="password" placeholder="Password" />
+                        <input asp-for="registerVM.Password" placeholder="Password" />
                       </div>
                       <div class="col-md-6">
                         <label>Confirm Password</label>
-                        <input type="password" placeholder="Confirm Password" />
+                        <input asp-for="registerVM.ConfirmPassword" placeholder="Confirm Password" />
                       </div>
                       <div class="col-12">
-                        <button
-                          class="btn btn-custom-size lg-size btn-pronia-primary"
-                        >
+                        <button type="submit"
+                          class="btn btn-custom-size lg-size btn-pronia-primary">
                           Register
                         </button>
                       </div>

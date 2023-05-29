@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Backend_Final_Project.Models;
+using Backend_Final_Project.ViewModels.Account;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Backend_Final_Project.Controllers
 {
