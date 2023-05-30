@@ -3,7 +3,6 @@
 namespace Backend_Final_Project.ViewModels.Account;
 public class RegisterVM
 {
-    public int Id { get; set; }
     [Required, MaxLength(100)]
     public string FirstName { get; set; }
 
@@ -18,4 +17,8 @@ public class RegisterVM
 
     [Required, DataType(DataType.Password), Compare(nameof(Password))]
     public string ConfirmPassword { get; set; }
+
+    [Required, MaxLength(100)]
+    public string UserName { get; set; }
+
 }

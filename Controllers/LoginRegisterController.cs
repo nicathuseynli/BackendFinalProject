@@ -21,28 +21,24 @@ namespace Backend_Final_Project.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var loginAndRegister = await _context.UserLogins.ToListAsync();
             LoginRegisterVM loginVm = new()
             {
-                registerVM =  ,            
+                loginVM = new LoginVM(),
+                registerVM = new RegisterVM(),
             };
             return View(loginVm);
         }
 
-        public IActionResult Login()
-        {
-            return View();
-        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginVM loginVM)
         {
-            if(!ModelState.IsValid)
-                return View(loginVM);
 
-            var appUser = await _userManager.FindByEmailAsync(loginVM.EmailAddress);
+            if (!ModelState.IsValid)
+                return View(loginVM);
+            var appUser = await _userManager.FindByNameAsync(loginVM.UserName);
 
             if (appUser == null)
                  ModelState.AddModelError("","User Not Found");
@@ -51,13 +47,7 @@ namespace Backend_Final_Project.Controllers
              if (!result.Succeeded)
                 ModelState.AddModelError("", "User Not Found");
 
-
-            return View();
-        }
-
-        public IActionResult Register()
-        {
-            return View();
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]
@@ -72,6 +62,7 @@ namespace Backend_Final_Project.Controllers
                 FirstName = registerVM.FirstName,
                 LastName = registerVM.LastName,
                 Email = registerVM.Email,
+                UserName = registerVM.UserName,
             };
 
              await _userManager.CreateAsync(newUser, registerVM.Password);
@@ -79,11 +70,11 @@ namespace Backend_Final_Project.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        //public async Task<IActionResult> Logout()
-        //{
-        //    await _signInManager.SignOutAsync();
-        //    return RedirectToAction("Index", "Home");
-        //}
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
 
 
     }

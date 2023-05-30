@@ -269,3 +269,4 @@ C:\Users\user\source\repos\Backend Final Project\Backend Final Project\bin\Debug
 C:\Users\user\source\repos\Backend Final Project\Backend Final Project\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\user\source\repos\Backend Final Project\Backend Final Project\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\user\source\repos\Backend Final Project\Backend Final Project\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\user\source\repos\Backend Final Project\Backend Final Project\bin\Debug\net6.0\Microsoft.AspNet.Identity.Core.dll
