@@ -17,16 +17,19 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
             _context = context;
             _webHostEnvironment = webHostEnvironment;
         }
+
         public async Task<IActionResult> Index()
         {
             var contactInfo = await _context.ContactInformations.ToListAsync();
             return View(contactInfo);
         }
+
         [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(CreateContactInfoVM createContactInfoVM)
@@ -63,7 +66,6 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
             _context.ContactInformations.Remove(contactInfo);
             await _context.SaveChangesAsync();
             return RedirectToAction("Index");
-
         }
 
         [HttpGet]

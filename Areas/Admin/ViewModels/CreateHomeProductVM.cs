@@ -11,5 +11,7 @@ public class CreateHomeProductVM
 
     public decimal Rating { get; set; }
     [Required]
-    public IFormFile Photo { get; set; }
+    public IFormFile Photo { get; set; } 
+    [Required]
+    public IFormFile HoverPhoto { get; set; }
 }

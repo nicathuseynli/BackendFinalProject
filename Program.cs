@@ -19,11 +19,11 @@ builder.Services.AddIdentity<AppUser, IdentityRole>()
 
 builder.Services.Configure<IdentityOptions>(options =>
 {
-    //options.Password.RequiredLength = 10;
-    //options.Password.RequireNonAlphanumeric = true;
-    //options.Password.RequireUppercase = true;
-    //options.Password.RequireLowercase = true;
-    //options.Password.RequireDigit = true;
+    options.Password.RequiredLength = 10;
+    options.Password.RequireNonAlphanumeric = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireDigit = true;
 
     options.User.RequireUniqueEmail = true;
 

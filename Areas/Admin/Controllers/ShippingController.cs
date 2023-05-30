@@ -77,11 +77,6 @@ public class ShippingController : Controller
     [HttpPost]
     public async Task<IActionResult> Delete(int id)
     {
-        var shippingsCount = await _context.Shippings.CountAsync();
-        /*    if (shippingsCount <= 2)
-            {
-                return RedirectToAction(nameof(Index));
-            }*/
         var shippings = await _context.Shippings.FirstOrDefaultAsync(x => x.Id == id);
 
         if (shippings == null) return View();

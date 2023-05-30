@@ -14,6 +14,8 @@
                     <th scope="col">Name</th>
                     <th scope="col">Price</th>
                     <th scope="col">Rating</th>
+                    <th scope="col">HoverImageUrl</th>
+                    <th scope="col">ImageUrl</th>
                     <th scope="col">Operations</th>
                 </tr>
             </thead>
@@ -27,6 +29,8 @@
                         <td scope="col">@homeProduct.Rating</td>
                         <td scope="col">
                             <img src="~/images/@homeProduct.Image" style="border-radius:20%" />
+                        </td>      <td scope="col">
+                            <img src="~/images/@homeProduct.HoverImage" style="border-radius:20%" />
                         </td>
                         <td>
                             <a asp-action="Update" asp-route-id="@homeProduct.Id" class="btn btn-outline-warning">Update</a>

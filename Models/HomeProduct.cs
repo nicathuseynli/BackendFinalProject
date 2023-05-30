@@ -13,12 +13,15 @@ public class HomeProduct:BaseEntity<int>
 
     [MaxLength(50)]
     public decimal Rating { get; set; }
+
     public string Image { get; set; }
 
+    public string HoverImage { get; set; }
+
     [NotMapped]
-    public IFormFile Photo { get; set; }
+    public IFormFile Photo { get; set; }   
+
+    [NotMapped]
+    public IFormFile HoverPhoto { get; set; }
    
-    //navigation
-    public int HomeCategoryId { get; set; }
-    public HomeCategory HomeCategory { get; set; }
 }

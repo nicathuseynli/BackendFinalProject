@@ -92,14 +92,10 @@ public class NewProductController : Controller
             System.IO.File.Delete(hoverpath);
         }
 
-        System.IO.File.Delete(path);
-
         _context.NewProducts.Remove(newproduct);
         await _context.SaveChangesAsync();
         return RedirectToAction(nameof(Index));
-
     }
-
     [HttpGet]
     public async Task<IActionResult> Update(int id)
     {
