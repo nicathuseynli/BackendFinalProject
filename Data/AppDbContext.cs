@@ -26,6 +26,10 @@ namespace Backend_Final_Project.Data
         public DbSet<SocialMediaAdress> SocialMediaAdresses { get; set; }
         public DbSet<HeaderPhoneNumber> HeaderPhoneNumbers { get; set; }
         public DbSet<HeaderInfo> HeaderInfos { get; set; }
+        public DbSet<RealetedProduct> RealetedProducts { get; set; }
+        public DbSet<SingleProductDescription> SingleProductDescription { get; set; }
+        public DbSet<SingleProductPageInformation> SingleProductPageInformation { get; set; }
+        public DbSet<SingleProductReview> SingleProductReviews { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

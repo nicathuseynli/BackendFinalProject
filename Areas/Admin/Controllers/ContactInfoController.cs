@@ -10,12 +10,10 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
     public class ContactInfoController : Controller
     {
         private readonly AppDbContext _context;
-        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public ContactInfoController(AppDbContext context, IWebHostEnvironment webHostEnvironment)
+        public ContactInfoController(AppDbContext context)
         {
             _context = context;
-            _webHostEnvironment = webHostEnvironment;
         }
 
         public async Task<IActionResult> Index()

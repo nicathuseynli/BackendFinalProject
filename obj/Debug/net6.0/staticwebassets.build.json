@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JolJkGBNOx7ZlN919z8Ck5O27FD81wD4bg0B5RlX9i8=",
+  "Hash": "kHtqkh96Wh4dI3IzL3Mf2h321suaKWAIN2U36o5rhFc=",
   "Source": "Backend Final Project",
   "BasePath": "_content/Backend Final Project",
   "Mode": "Default",
@@ -3451,6 +3451,23 @@
       "OriginalItemSpec": "wwwroot\\images\\60f438aa-547b-4b9d-8c36-926bba0b4b81_WIN_20230108_00_11_27_Pro.jpg"
     },
     {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\638d0880-0c87-461b-ad07-461854ebfc7c_3hcns7bt28muj7ih.jpg",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/638d0880-0c87-461b-ad07-461854ebfc7c_3hcns7bt28muj7ih.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\638d0880-0c87-461b-ad07-461854ebfc7c_3hcns7bt28muj7ih.jpg"
+    },
+    {
       "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\670dbca4-0094-45d8-960f-6484814e33b5__WIN_20230108_00_08_02_Pro.jpg",
       "SourceId": "Backend Final Project",
       "SourceType": "Discovered",
@@ -3585,6 +3602,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\856e0282-0676-40da-a022-6e621fc933a7_WIN_20230112_23_28_19_Pro.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\85fd1cde-56f9-445c-8b5c-5983e89464e5_WIN_20230108_00_08_06_Pro.jpg",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/85fd1cde-56f9-445c-8b5c-5983e89464e5_WIN_20230108_00_08_06_Pro.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\85fd1cde-56f9-445c-8b5c-5983e89464e5_WIN_20230108_00_08_06_Pro.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\8ab24edd-f7ac-4461-905d-1c32fd055a44_WIN_20230116_17_23_42_Pro.jpg",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/8ab24edd-f7ac-4461-905d-1c32fd055a44_WIN_20230116_17_23_42_Pro.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\8ab24edd-f7ac-4461-905d-1c32fd055a44_WIN_20230116_17_23_42_Pro.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\9329a27e-942f-423c-91ab-48b8c92c4493_WIN_20230217_19_19_02_Pro.jpg",
