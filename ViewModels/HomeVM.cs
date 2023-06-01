@@ -17,8 +17,6 @@ public class HomeVM
 
     public List<Testimonial> Testimonials { get; set; }
 
-    public List<NewProduct> NewProducts { get; set; }
-
     public HomeDescription HomeDescriptions { get; set; }
 
     public List<Banner> Baners { get; set; }

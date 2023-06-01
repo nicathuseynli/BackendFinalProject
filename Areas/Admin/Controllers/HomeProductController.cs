@@ -60,6 +60,7 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
                 Name = createhomeproductVm.Name,
                 Rating = createhomeproductVm.Rating,
                 Price = createhomeproductVm.Price,
+            Description = createhomeproductVm.Description,
                 Image = filename,
                 HoverImage = Hoverfilename,
             };
@@ -111,6 +112,7 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
                 Name = homeproduct.Name,
                 Price = homeproduct.Price,
                 Rating = homeproduct.Rating,
+                Description = homeproduct.Description,
                 Image = homeproduct.Image,
                 HoverImage = homeproduct.HoverImage,
             };
@@ -161,9 +163,12 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
             homeproduct.Name = updateHomeProductVM.Name;
             homeproduct.Price = updateHomeProductVM.Price;
             homeproduct.Rating = updateHomeProductVM.Rating;
+            homeproduct.Description = updateHomeProductVM.Description;
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
     }
+
+    //ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", mcat.CategoryId);
 }
 

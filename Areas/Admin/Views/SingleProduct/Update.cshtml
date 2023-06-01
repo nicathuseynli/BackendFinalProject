@@ -1,19 +1,29 @@
-﻿@model UpdateSingleProductReviewVM
+﻿@model UpdateSingleProductVM
 <div class="container">
     <h1 class="text-center">Update Slider</h1>
       <img src="~/images/@Model.UserImage" width="500px" height="500px"/>
       <div class="row">
              <form asp-action="Update" method="post" class="forms-sample" enctype="multipart/form-data">
-                 <div class="form-group">
-                   <input asp-for="CommentCount" class="form-control" placeholder="CommentCount">
-                 </div> <div class="form-group">
+                  <div class="form-group">
                    <input asp-for="UserFullname" class="form-control" placeholder="UserFullname">
                  </div>
                  <div class="form-group">
                    <input asp-for="UserComment" class="form-control"placeholder="UserComment">
+                 </div> 
+                 <div class="form-group">
+                   <input asp-for="CommentCount" class="form-control"placeholder="CommentCount">
+                 </div>  
+                 <div class="form-group">
+                   <input asp-for="AboutReturnInfo" class="form-control"placeholder="AboutReturnInfo">
+                 </div>    
+                 <div class="form-group">
+                   <input asp-for="GuaranteeInfo" class="form-control"placeholder="GuaranteeInfo">
+                 </div>   
+                 <div class="form-group">
+                   <input asp-for="ShippingInfo" class="form-control"placeholder="ShippingInfo">
                  </div>
                  <div class="form-group">
-                   <label>Slider Image</label>
+                   <label>Single Product Image</label>
                    <input asp-for="UserPhoto" class="form-control">
                  </div>
                  <button type="submit" class="btn btn-outline-success me-2">Update</button>
@@ -22,3 +32,4 @@
              </form>
       </div>
 </div>
+

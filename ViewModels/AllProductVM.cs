@@ -3,9 +3,13 @@
 namespace Backend_Final_Project.ViewModels;
 public class AllProductVM
 {
-    public List<NewProduct> NewProducts { get; set; }
+    public HomeProduct Homeproduct { get; set; }
+
+    public List<HomeProduct> HomeProducts { get; set; }
+
     public RealetedProduct RealetedProducts { get; set; }
-    public List<SingleProductReview> SingleProductReviews { get; set; }
-    public SingleProductPageInformation SingleProductPageInformation { get; set; }
-    public SingleProductDescription SingleProductDescription { get; set; }
+
+    public List<SingleProduct> SingleProducts { get; set; }
+
+    public SingleProduct SingleProduct { get; set; }
 }

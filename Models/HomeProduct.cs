@@ -17,6 +17,7 @@ public class HomeProduct:BaseEntity<int>
     public string Image { get; set; }
 
     public string HoverImage { get; set; }
+    public string Description { get; set; }
 
     [NotMapped]
     public IFormFile Photo { get; set; }   

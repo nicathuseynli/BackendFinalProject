@@ -215,26 +215,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVByb2R1Y3RcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/NewProduct/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmV3UHJvZHVjdFxDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/NewProduct/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmV3UHJvZHVjdFxEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/NewProduct/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmV3UHJvZHVjdFxEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/NewProduct/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmV3UHJvZHVjdFxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/NewProduct/Update.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmV3UHJvZHVjdFxVcGRhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/QuickLink/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUXVpY2tMaW5rXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -279,46 +259,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hpcHBpbmdcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProductDescription/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdERlc2NyaXB0aW9uXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProductDescription/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdERlc2NyaXB0aW9uXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProductDescription/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdERlc2NyaXB0aW9uXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProductDescription/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdERlc2NyaXB0aW9uXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProductDescription/Update.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdERlc2NyaXB0aW9uXFVwZGF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProductInformation/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdEluZm9ybWF0aW9uXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProductInformation/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdEluZm9ybWF0aW9uXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProductInformation/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdEluZm9ybWF0aW9uXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProductInformation/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdEluZm9ybWF0aW9uXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProductInformation/Update.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdEluZm9ybWF0aW9uXFVwZGF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProductRealeted/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdFJlYWxldGVkXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -339,24 +279,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdFJlYWxldGVkXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProductReview/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdFJldmlld1xDcmVhdGUuY3NodG1s
+[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProduct/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProductReview/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdFJldmlld1xEZWxldGUuY3NodG1s
+[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProduct/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProductReview/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdFJldmlld1xEZXRhaWxzLmNzaHRtbA==
+[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProduct/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProductReview/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdFJldmlld1xJbmRleC5jc2h0bWw=
+[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProduct/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProductReview/Update.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdFJldmlld1xVcGRhdGUuY3NodG1s
+[C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/SingleProduct/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2luZ2xlUHJvZHVjdFxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/user/source/repos/Backend Final Project/Backend Final Project/Areas/Admin/Views/Slider/Create.cshtml]

@@ -126,7 +126,7 @@
                                 <div class="col-xl-3 col-md-4 col-sm-6">
                                     <div class="product-item">
                                         <div class="product-img">
-                                            <a asp-controller="HomeProduct" asp-action="Index" asp-route-id="@product.Id">
+                                            <a asp-controller="Shop" asp-action="Index" asp-route-id="@product.Id">
                                                 <img class="primary-img" src="~/images/@product.Image"
                                                      alt="Product Images" />
                                                 <img class="secondary-img" src="~/images/@product.HoverImage"
@@ -184,7 +184,7 @@
                                 <div class="col-xl-3 col-md-4 col-sm-6">
                                     <div class="product-item">
                                         <div class="product-img">
-                                            <a href="shop.html">
+                                            <a asp-controller="Shop" asp-action="Index" asp-route-id="@product.Id" >
                                                 <img class="primary-img" src="~/images/@product.Image"
                                                      alt="Product Images" />
                                                 <img class="secondary-img" src="~/images/@product.HoverImage"
@@ -242,7 +242,7 @@
                                 <div class="col-xl-3 col-md-4 col-sm-6">
                                     <div class="product-item">
                                         <div class="product-img">
-                                            <a asp-controller="HomeProduct" asp-action="Index" asp-route-id="@product.Id">
+                                            <a asp-controller="Shop" asp-action="Index" asp-route-id="@product.Id">
                                                 <img class="primary-img" src="~/images/@product.Image"
                                                      alt="Product Images" />
                                                 <img class="secondary-img" src="~/images/@product.HoverImage"
@@ -403,7 +403,7 @@
             <div class="col-lg-12">
               <div class="swiper-container product-slider">
                 <div class="swiper-wrapper">
-                    @foreach (var newproduct in Model.NewProducts)
+                    @foreach (var newproduct in Model.HomeProducts)
                         {
                             
                   <div class="swiper-slide product-item">
@@ -411,12 +411,12 @@
                       <a asp-controller="Shop" asp-action="Index">
                         <img
                           class="primary-img"
-                          src="~/images/@newproduct.ProductImg"
+                          src="~/images/@newproduct.Image"
                           alt="Product Images"
                         />
                         <img
                           class="secondary-img"
-                          src="~/images/@newproduct.HoverImg"
+                          src="~/images/@newproduct.HoverImage"
                           alt="Product Images"
                         />
                      </a>

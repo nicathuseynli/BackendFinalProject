@@ -26,7 +26,6 @@ namespace Backend_Final_Project.Controllers
             var singleblog = await _context.Blogs.FirstOrDefaultAsync();
             var baner = await _context.Banners.ToListAsync();
             var testimonial = await _context.Testimonials.ToListAsync();
-            var newproduct = await _context.NewProducts.ToListAsync();
             var description = await _context.HomeDescriptions.FirstOrDefaultAsync();
             ViewBag.datetime = DateTime.Now.ToString("dd MMMM yyyy");
 
@@ -39,7 +38,6 @@ namespace Backend_Final_Project.Controllers
                 Blogs = blogs,
                 AboutCompanySliders = aboutcompanysliders,
                 Testimonials = testimonial,
-                NewProducts = newproduct,
                 Baners = baner,
                 HomeDescriptions = description,
             };

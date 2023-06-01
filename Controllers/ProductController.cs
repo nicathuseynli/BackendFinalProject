@@ -16,20 +16,20 @@ namespace Backend_Final_Project.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var newproduct = await _context.NewProducts.ToListAsync();
+            var homeproduct= await _context.HomeProducts.FirstOrDefaultAsync();
+            var newproducts = await _context.HomeProducts.ToListAsync();
             var realetedProduct = await _context.RealetedProducts.FirstOrDefaultAsync();
-            var singleProductPageInformations = await _context.SingleProductPageInformation.FirstOrDefaultAsync();
-            var singleProductDescription = await _context.SingleProductDescription.FirstOrDefaultAsync();
-            var singleProductReview = await _context.SingleProductReviews.ToListAsync();
+            var singleProduct = await _context.SingleProducts.FirstOrDefaultAsync();
+            var singleProducts = await _context.SingleProducts.ToListAsync();
             ViewBag.datetime = DateTime.Now.ToString("dd MMMM yyyy");
 
             AllProductVM productVM = new AllProductVM()
             {
                 RealetedProducts = realetedProduct,
-                NewProducts = newproduct,
-                SingleProductReviews = singleProductReview,
-                SingleProductPageInformation = singleProductPageInformations,
-                SingleProductDescription = singleProductDescription,
+                Homeproduct = homeproduct,
+                HomeProducts = newproducts,
+                SingleProduct = singleProduct,
+                SingleProducts = singleProducts
             };
             return View(productVM);
         }

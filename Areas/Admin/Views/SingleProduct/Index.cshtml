@@ -1,4 +1,4 @@
-﻿@model List<NewProduct>
+﻿@model List<SingleProduct>
 @{
     int count = 1;
 }
@@ -11,28 +11,34 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Rating</th>
+                    <th scope="col">Information</th>
+                    <th scope="col">ShippingInfo</th>
+                    <th scope="col">AboutReturnInfo</th>
+                    <th scope="col">GuaranteeInfo</th>
+                    <th scope="col">CommentCount</th>
+                    <th scope="col">UserFullname</th>
+                    <th scope="col">UserComment</th>
                     <th scope="col">Operations</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var newProduct in Model)
+                @foreach (var singleProduct in Model)
                 {
                     <tr>
                         <td scope="col">@(count++)</td>
-                        <td scope="col">@newProduct.Name</td>
-                        <td scope="col">@newProduct.Price</td>
-                        <td scope="col">@newProduct.Rating</td>
+                        <td scope="col">@singleProduct.Information</td>
+                        <td scope="col">@singleProduct.ShippingInfo</td>
+                        <td scope="col">@singleProduct.AboutReturnInfo</td>
+                        <td scope="col">@singleProduct.GuaranteeInfo</td>
+                        <td scope="col">@singleProduct.CommentCount</td>
+                        <td scope="col">@singleProduct.UserFullname</td>
+                        <td scope="col">@singleProduct.UserComment</td>
                         <td scope="col">
-                            <img src="~/images/@newProduct.ProductImg" style="border-radius:20%" />
-                        </td>  <td scope="col">
-                            <img src="~/images/@newProduct.HoverImg" style="border-radius:20%" />
+                            <img src="~/images/@singleProduct.UserImage" style="border-radius:20%" />
                         </td>
                         <td>
-                            <a asp-action="Update" asp-route-id="@newProduct.Id" class="btn btn-outline-warning">Update</a>
-                            <a asp-action="Details" asp-route-id="@newProduct.Id" class="btn btn-outline-info">Details</a>
+                            <a asp-action="Update" asp-route-id="@singleProduct.Id" class="btn btn-outline-warning">Update</a>
+                            <a asp-action="Details" asp-route-id="@singleProduct.Id" class="btn btn-outline-info">Details</a>
 
                             <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal@(count)">
                                 Delete
@@ -46,12 +52,12 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <p>Product will be deleted.</p>
+                                            <p>Shipping will be deleted.</p>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">No</button>
                                             <form style="display:inline-block" asp-action="Delete" method="post">
-                                                <input type="submit" asp-action="Delete" asp-route-id="@newProduct.Id" class="btn btn-outline-danger" value="Yes">
+                                                <input type="submit" asp-action="Delete" asp-route-id="@singleProduct.Id" class="btn btn-outline-danger" value="Yes">
                                             </form>
                                         </div>
                                     </div>

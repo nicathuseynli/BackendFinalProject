@@ -20,16 +20,13 @@ namespace Backend_Final_Project.Data
         public DbSet<Banner> Banners { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
-        public DbSet<NewProduct> NewProducts { get; set; }
         public DbSet<HomeDescription> HomeDescriptions { get; set; }
         public DbSet<QuickLink> QuickLinks { get; set; }
         public DbSet<SocialMediaAdress> SocialMediaAdresses { get; set; }
         public DbSet<HeaderPhoneNumber> HeaderPhoneNumbers { get; set; }
         public DbSet<HeaderInfo> HeaderInfos { get; set; }
         public DbSet<RealetedProduct> RealetedProducts { get; set; }
-        public DbSet<SingleProductDescription> SingleProductDescription { get; set; }
-        public DbSet<SingleProductPageInformation> SingleProductPageInformation { get; set; }
-        public DbSet<SingleProductReview> SingleProductReviews { get; set; }
+        public DbSet<SingleProduct> SingleProducts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

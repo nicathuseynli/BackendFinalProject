@@ -2,8 +2,20 @@
 using System.Diagnostics.CodeAnalysis;
 
 namespace Backend_Final_Project.Areas.Admin.ViewModels.SingleProductPage;
-public class CreateSingleProductReviewVM
+public class CreateSingleProductVM
 {
+    [Required]
+    public string Information { get; set; }
+
+    [Required]
+    public string ShippingInfo { get; set; }
+
+    [Required]
+    public string AboutReturnInfo { get; set; }
+
+    [Required]
+    public string GuaranteeInfo { get; set; }
+
     [Required]
     public int CommentCount { get; set; }
 
