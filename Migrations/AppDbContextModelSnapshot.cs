@@ -289,6 +289,23 @@ namespace Backend_Final_Project.Migrations
                     b.ToTable("HeaderPhoneNumbers");
                 });
 
+            modelBuilder.Entity("Backend_Final_Project.Models.HomeCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HomeCategories");
+                });
+
             modelBuilder.Entity("Backend_Final_Project.Models.HomeDescription", b =>
                 {
                     b.Property<int>("Id")
@@ -326,6 +343,9 @@ namespace Backend_Final_Project.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("HomeCategoryId")
+                        .HasColumnType("int");
+
                     b.Property<string>("HoverImage")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -348,6 +368,8 @@ namespace Backend_Final_Project.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("HomeCategoryId");
 
                     b.ToTable("HomeProducts");
                 });
@@ -683,6 +705,17 @@ namespace Backend_Final_Project.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Backend_Final_Project.Models.HomeProduct", b =>
+                {
+                    b.HasOne("Backend_Final_Project.Models.HomeCategory", "HomeCategory")
+                        .WithMany("HomeProducts")
+                        .HasForeignKey("HomeCategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("HomeCategory");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -732,6 +765,11 @@ namespace Backend_Final_Project.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Backend_Final_Project.Models.HomeCategory", b =>
+                {
+                    b.Navigation("HomeProducts");
                 });
 #pragma warning restore 612, 618
         }

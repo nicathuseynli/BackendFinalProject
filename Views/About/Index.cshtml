@@ -28,13 +28,13 @@
         <div class="about-area section-space-top-95">
           <div class="container">
             <div class="row">
-               @foreach (var pages in @Model.AboutPages)
+               @foreach (var pages in @Model?.AboutPages)
                {
                     <div class="col-lg-12">
                           <div class="about-content">
                              <h2 class="about-title">Our <span>Story</span></h2>
                              <p class="about-desc">
-                                 @pages.Information
+                                 @pages?.Information
                              </p>
                              <div class="about-signature">
                                <img
@@ -55,19 +55,19 @@
         <div class="container">
           <div class="shipping-bg">
             <div class="row shipping-wrap">
-                @foreach (var shipping in @Model.Shippings)
+                @foreach (var shipping in @Model?.Shippings)
                 {
                     <div class="col-lg-4 col-md-6">
                 <div class="shipping-item">
                   <div class="shipping-img">
                     <img
-                      src="~/images/@shipping.Image"
+                      src="~/images/@shipping?.Image"
                       alt="Shipping Icon"
                     />
                   </div>
                   <div class="shipping-content">
-                    <h2 class="title">@shipping.Label</h2>
-                    <p class="short-desc mb-0">@shipping.Description</p>
+                    <h2 class="title">@shipping?.Label</h2>
+                    <p class="short-desc mb-0">@shipping?.Description</p>
                   </div>
                 </div>
               </div>
@@ -83,18 +83,18 @@
           <div class="banner-area">
             <div class="container">         
               <div class="row">
-                    @foreach (var pages in @Model.AboutPages)
+                    @foreach (var pages in @Model?.AboutPages)
                     {        
                 <div class="col-lg-12">
                   <div class="banner-boxshadow">
                     <div
                       class="banner-item"
-                      data-bg-image="/images/@pages.Image"
+                      data-bg-image="/images/@pages?.Image"
                     >
                       <div class="popup-btn">
                         <a
                           class="popup-vimeo wave-btn"
-                          href="@pages.VideoLink"
+                          href="@pages?.VideoLink"
                         >
                           <span></span>
                           <span></span>
@@ -114,7 +114,7 @@
           </div>
           <div class="counter-area">
             <div class="container">
-                @foreach (var pages in @Model.AboutPages)
+                @foreach (var pages in @Model?.AboutPages)
                 {
               <h2 class="counter-title">
                  @pages.CenterTitle
@@ -169,11 +169,11 @@
             <div class="section-title-wrap without-tab">
               <h2 class="section-title">Our Team</h2>
               <p class="section-desc">
-              @Model.aboutTeam.Description
+              @Model.aboutTeam?.Description
              </p>
             </div>
             <div class="row">
-                @foreach (var singlemember in @Model.AboutTeamMembers)
+                @foreach (var singlemember in @Model?.AboutTeamMembers)
                 {
                         <div class="col-lg-3 col-sm-6 pt-5 pt-sm-0">
                 <div class="team-item">
@@ -183,8 +183,8 @@
                       alt="Team Member"
                     />
                     <div class="inner-content">
-                      <h2 class="team-member-name">@singlemember.Name @singlemember.Surname</h2>
-                      <span class="occupation">@singlemember.Profession</span>
+                      <h2 class="team-member-name">@singlemember?.Name @singlemember?.Surname</h2>
+                      <span class="occupation">@singlemember?.Profession</span>
                       <div class="social-link with-border">
                         <ul>
                           <li>
@@ -231,7 +231,7 @@
                     </div>
                   </div>
                   <div class="team-content">
-                    <h2 class="team-member-name mb-0">@singlemember.Name @singlemember.Surname</h2>
+                    <h2 class="team-member-name mb-0">@singlemember?.Name @singlemember?.Surname</h2>
                   </div>
                 </div>
               </div>
@@ -251,12 +251,12 @@
                 <div class="col-lg-12">
                   <div class="swiper-container brand-slider">
                     <div class="swiper-wrapper">
-                  @foreach (var companyslider in @Model.AboutCompanySliders)
+                  @foreach (var companyslider in @Model?.AboutCompanySliders)
                     { 
                       <div class="swiper-slide">
                         <a class="brand-item" href="#">
                           <img
-                            src="~/images/@companyslider.Image"
+                            src="~/images/@companyslider?.Image"
                             alt="Brand Image"
                           />
                         </a>

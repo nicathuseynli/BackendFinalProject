@@ -2,6 +2,7 @@
 using Backend_Final_Project.Data;
 using Backend_Final_Project.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace Backend_Final_Project.Areas.Admin.Controllers
@@ -25,8 +26,9 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
             return View(homeproduct);
         }
         [HttpGet]
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+            ViewBag.Category = new SelectList(await _context.HomeCategories.ToListAsync(),"Id","Name" );
             return View();
         }
 
@@ -35,7 +37,10 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
         public async Task<IActionResult> Create(CreateHomeProductVM createhomeproductVm)
         {
             if (!ModelState.IsValid)
+            {
+                ViewBag.Category = new SelectList(await _context.HomeCategories.ToListAsync(), "Id", "Name");
                 return View();
+            }
 
             if (!createhomeproductVm.Photo.ContentType.Contains("image/") && !createhomeproductVm.HoverPhoto.ContentType.Contains("image/"))
                 return View();
@@ -60,7 +65,8 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
                 Name = createhomeproductVm.Name,
                 Rating = createhomeproductVm.Rating,
                 Price = createhomeproductVm.Price,
-            Description = createhomeproductVm.Description,
+                Description = createhomeproductVm.Description,
+                HomeCategoryId = createhomeproductVm.HomeCategoryId,
                 Image = filename,
                 HoverImage = Hoverfilename,
             };
@@ -109,6 +115,7 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
             var updateHomeProductVM = new UpdateHomeProductVM()
             {
                 Id = id,
+                HomeCategoryId = homeproduct.HomeCategoryId,
                 Name = homeproduct.Name,
                 Price = homeproduct.Price,
                 Rating = homeproduct.Rating,
@@ -164,6 +171,7 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
             homeproduct.Price = updateHomeProductVM.Price;
             homeproduct.Rating = updateHomeProductVM.Rating;
             homeproduct.Description = updateHomeProductVM.Description;
+            homeproduct.HomeCategoryId = updateHomeProductVM.HomeCategoryId;
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

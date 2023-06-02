@@ -35,20 +35,20 @@
                   >
                     <h2 class="contact-title">Contact Info:</h2>
                     <p class="contact-desc">
-                       @Model.ContactDescription
+                       @Model?.ContactDescription
                     </p>
                     <ul class="contact-list">
                       <li>
                         <i class="pe-7s-call"></i>
-                        <a href="tel://@Model.PhoneNumber">@Model.PhoneNumber</a>
+                        <a href="tel://@Model?.PhoneNumber">@Model?.PhoneNumber</a>
                       </li>
                       <li>
                         <i class="pe-7s-mail"></i>
-                        <a href="mailto://@Model.MailAddress">@Model.MailAddress</a>
+                        <a href="mailto://@Model?.MailAddress">@Model?.MailAddress</a>
                       </li>
                       <li>
                         <i class="pe-7s-map-marker"></i>
-                        <span>@Model.Address</span>
+                        <span>@Model?.Address</span>
                       </li>
                     </ul>
                   </div>

@@ -13,6 +13,7 @@ namespace Backend_Final_Project.Data
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Shipping> Shippings { get; set; }
         public DbSet<HomeProduct> HomeProducts { get; set; }
+        public DbSet<HomeCategory> HomeCategories { get; set; }
         public DbSet<About> AboutPages { get; set; }
         public DbSet<AboutTeam> AboutTeamMembers{ get; set; }
         public DbSet<AboutCompanySlider> AboutCompanySliders { get; set; }

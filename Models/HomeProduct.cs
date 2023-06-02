@@ -17,6 +17,7 @@ public class HomeProduct:BaseEntity<int>
     public string Image { get; set; }
 
     public string HoverImage { get; set; }
+
     public string Description { get; set; }
 
     [NotMapped]
@@ -24,5 +25,9 @@ public class HomeProduct:BaseEntity<int>
 
     [NotMapped]
     public IFormFile HoverPhoto { get; set; }
-   
+
+    //navigation
+    public virtual HomeCategory HomeCategory { get; set; }
+
+    public int HomeCategoryId { get; set; }
 }

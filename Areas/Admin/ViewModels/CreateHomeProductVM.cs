@@ -10,6 +10,8 @@ public class CreateHomeProductVM
     public string Description { get; set; }
     [Required]
     public decimal Price { get; set; }
+    
+    public int HomeCategoryId { get; set; }
 
     public decimal Rating { get; set; }
     [Required]

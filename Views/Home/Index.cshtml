@@ -19,7 +19,7 @@
                   <div class="row">
                     <div class="col-lg-6 order-2 order-lg-1 align-self-center">
                       <div class="slide-content text-black">
-                        <span class="offer">@slider.Percent</span>
+                        <span class="offer">%@slider.Percent</span>
                         <h2 class="title">@slider.Label</h2>
                         <p class="short-desc">
                          @slider.Description
@@ -307,10 +307,11 @@
             <div class="col-lg-8">
               <div class="banner-item img-hover-effect">
                 <div class="banner-img">
-                  <img
-                    src="~/images/@Model.Baners[0].BannerImage"
-                    alt="Banner Image"
-                  />
+                    @if (Model.Baners[0] != null)
+                    {
+                     <img src="~/images/@Model.Baners[0].BannerImage"
+                      alt="Banner Image"/>
+                    }
                 </div>
                 <div class="banner-content text-position-left">
                   <span class="collection">@Model.Baners[0].Title</span>

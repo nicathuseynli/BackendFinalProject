@@ -15,7 +15,7 @@ namespace Backend_Final_Project.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var product = await _context.HomeProducts.ToListAsync();
+            var product = await _context.HomeProducts.Include(x=>x.HomeCategory).ToListAsync();
             return View(product);
         }
     }

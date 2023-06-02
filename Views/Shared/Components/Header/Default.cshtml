@@ -7,7 +7,7 @@
               <div class="col-6">
                 <div class="header-top-left">
                   <span class="pronia-offer"
-                    >@Model.HeaderInfo.Information</span
+                    >@Model.HeaderInfo?.Information</span
                   >
                 </div>
               </div>
@@ -66,7 +66,7 @@
                 <div class="header-middle-wrap position-relative">
                   <div class="header-contact d-none d-lg-flex">
                     <i class="pe-7s-call"></i>
-                    <a href="@Model.HeaderPhoneNumber.PhoneNumber">+@Model.HeaderPhoneNumber.PhoneNumber</a>
+                    <a href="@Model.HeaderPhoneNumber?.PhoneNumber">+@Model.HeaderPhoneNumber?.PhoneNumber</a>
                   </div>
 
                   <a asp-controller="Home" asp-action="Index" class="header-logo">

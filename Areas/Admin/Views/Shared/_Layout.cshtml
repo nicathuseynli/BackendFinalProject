@@ -190,8 +190,8 @@
                              <li class="nav-item"> <a class="nav-link" asp-controller="HomeDescription" asp-action="Index">All Descriptions</a></li>
                              <li class="nav-item"> <a class="nav-link" asp-controller="Blog" asp-action="Index">Blog</a></li>
                              <li class="nav-item"> <a class="nav-link" asp-controller="Banner" asp-action="Index">Banner</a></li>
+                             <li class="nav-item"> <a class="nav-link" asp-controller="AboutCompanySlider" asp-action="Index">Brand</a></li>
                              <li class="nav-item"> <a class="nav-link" asp-controller="Testimonial" asp-action="Index">Testimonial</a></li>
-                             <li class="nav-item"> <a class="nav-link" asp-controller="NewProduct" asp-action="Index">New Product</a></li>
                             </ul>
                         </div>
                     </li>
@@ -245,6 +245,18 @@
                         <div class="collapse" id="singleproduct">
                             <ul class="nav flex-column sub-menu">
                              <li class="nav-item"> <a class="nav-link" asp-controller="SingleProduct" asp-action="Index">SingleProduct</a></li>
+                             </ul>
+                        </div>
+                       </li>           
+                       <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#shop" aria-expanded="false" aria-controls="shop">
+                            <i class="mdi mdi mdi-store menu-icon"></i>
+                            <span class="menu-title">Shop</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="shop">
+                            <ul class="nav flex-column sub-menu">
+                             <li class="nav-item"> <a class="nav-link" asp-controller="HomeCategory" asp-action="Index">Category</a></li>
                              </ul>
                         </div>
                        </li>
