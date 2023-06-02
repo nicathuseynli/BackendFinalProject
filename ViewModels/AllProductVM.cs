@@ -5,7 +5,7 @@ public class AllProductVM
 {
     public HomeProduct Homeproduct { get; set; }
 
-    public List<HomeProduct> HomeProducts { get; set; }
+    public List<HomeProduct> HomeProducts { get; set; } 
 
     public RealetedProduct RealetedProducts { get; set; }
 

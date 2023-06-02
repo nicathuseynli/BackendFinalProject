@@ -1,4 +1,4 @@
-﻿ @model List<HomeProduct>  
+﻿ @model ShopVM
   <!-- Begin Main Content Area -->
       <main class="main-content">
         <div
@@ -42,85 +42,42 @@
                     <div class="widgets-item pt-0">
                       <h2 class="widgets-title mb-4">Categories</h2>
                       <ul class="widgets-category">
-                        <li>
-                          <a href="#">
+                          <li>
+                              <a asp-route-categoryId="">
                             <i class="fa fa-chevron-right"></i>
-                            All <span>(65)</span>
+                            All
                           </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="fa fa-chevron-right"></i>
-                            Bansai <span>(12)</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="fa fa-chevron-right"></i>
-                            House Plants <span>(22)</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="fa fa-chevron-right"></i>
-                            Indoor Living <span>(19)</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="fa fa-chevron-right"></i>
-                            Perennnials <span>(17)</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="fa fa-chevron-right"></i>
-                            Plant For Gift <span>(01)</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="fa fa-chevron-right"></i>
-                            Garden Tools <span>(12)</span>
-                          </a>
-                        </li>
+                          </li>
+                        @foreach (var category in Model.HomeCategories)
+                        {
+                             <li>
+                                <a asp-route-categoryId="@category.Id">
+                                  <i class="fa fa-chevron-right"></i>
+                                  @category.Name <span>(@category?.HomeProducts.Count())</span>
+                                </a>
+                             </li>           
+                        } 
                       </ul>
                     </div>
                     <div class="widgets-item">
                       <h2 class="widgets-title mb-4">Color</h2>
                       <ul class="widgets-category widgets-color">
                         <li>
-                          <a href="#">
+                          <a asp-route-shoppagecolourId="">
                             <i class="fa fa-chevron-right"></i>
-                            All <span>(65)</span>
+                            All
                           </a>
                         </li>
-                        <li>
-                          <a href="#">
-                            <i class="fa fa-chevron-right"></i>
-                            Gold <span>(12)</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="fa fa-chevron-right"></i>
-
-                            Green <span>(22)</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="fa fa-chevron-right"></i>
-                            white <span>(13)</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="fa fa-chevron-right"></i>
-                            Black <span>(10)</span>
-                          </a>
-                        </li>
-                      </ul>
+                        @foreach (var color in Model.ShopPageColours)
+                        {
+                             <li>
+                                <a asp-route-shoppagecolourId="@color.Id">
+                                  <i class="fa fa-chevron-right"></i>
+                                  @color?.Colour<span>(@color?.HomeProducts.Count())</span>
+                                </a>
+                             </li>           
+                         }
+                     </ul>
                     </div>
                     <div class="widgets-item widgets-filter">
                       <h2 class="widgets-title mb-4">Price Filter</h2>
@@ -136,7 +93,8 @@
                           data-to="300"
                           data-max="350"
                           data-grid="false"
-                        />
+                        /> 
+
                       </div>
                     </div>
                     <div class="widgets-item">
@@ -165,13 +123,10 @@
                   </div>
                   <div class="banner-item widgets-banner img-hover-effect">
                     <div class="banner-img">
-                      <img
-                        src="~/images/website-images/1-270x300.webp"
-                        alt="Banner Image"
-                      />
+                    <img src="~/images/@Model.Banner?.BannerImage" alt="Banner Image" />
                     </div>
                     <div class="banner-content text-position-center">
-                      <span class="collection">New Collection</span>
+                      <span class="collection">@Model.Banner?.Description</span>
                       <h3 class="title">Plant Port</h3>
                       <div class="button-wrap">
                         <a
@@ -188,7 +143,7 @@
                 <div class="product-topbar">
                   <ul>
                     <li class="page-count">
-                      <span>12</span> Product Found of <span>30</span>
+                      <span>@Model.HomeProducts.Count()</span> Product Found of <span>@Model.HomeProducts.Count().ToString()</span>
                     </li>
                     <li class="product-view-wrap">
                       <ul class="nav" role="tablist">
@@ -237,93 +192,93 @@
                     aria-labelledby="grid-view-tab">
              
                     <div class="product-grid-view row g-y-20">
-                      @foreach (var product in Model)
-                      {                 
-                      <div class="col-md-4 col-sm-6">
-                        <div class="product-item">
-                          <div class="product-img">
-                            <a asp-controller="Product" asp-action="Index" asp-route-id="@product.Id">
-                              <img
-                                class="primary-img"
-                                src="~/images/@product?.Image"
-                                alt="Product Images"
-                              />
-                              <img
-                                class="secondary-img"
-                                src="~/images/@product?.HoverImage"
-                                alt="Product Images"
-                              />
-                            </a>
-                            <div class="product-add-action">
-                              <ul>
-                                <li>
-                                  <a
-                                    href="wishlist.html"
-                                    data-tippy="Add to wishlist"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
+                        @foreach (var product in Model.HomeProducts)
+                        {
+                         <div class="col-md-4 col-sm-6">
+                          <div class="product-item">
+                            <div class="product-img">
+                              <a asp-controller="Product" asp-action="Index" asp-route-id="@product.Id">
+                                <img
+                                  class="primary-img"
+                                  src="~/images/@product?.Image"
+                                  alt="Product Images"
+                                />
+                                <img
+                                  class="secondary-img"
+                                  src="~/images/@product?.HoverImage"
+                                  alt="Product Images"
+                                />
+                              </a>
+                              <div class="product-add-action">
+                                <ul>
+                                  <li>
+                                    <a
+                                      href="wishlist.html"
+                                      data-tippy="Add to wishlist"
+                                      data-tippy-inertia="true"
+                                      data-tippy-animation="shift-away"
+                                      data-tippy-delay="50"
+                                      data-tippy-arrow="true"
+                                      data-tippy-theme="sharpborder"
+                                    >
+                                      <i class="pe-7s-like"></i>
+                                    </a>
+                                  </li>
+                                  <li
+                                    class="quuickview-btn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#quickModal"
                                   >
-                                    <i class="pe-7s-like"></i>
-                                  </a>
-                                </li>
-                                <li
-                                  class="quuickview-btn"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#quickModal"
-                                >
-                                  <a
-                                    href="#"
-                                    data-tippy="Quickview"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-look"></i>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a
-                                    href="cart.html"
-                                    data-tippy="Add to cart"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-cart"></i>
-                                  </a>
-                                </li>
-                              </ul>
+                                    <a
+                                      href="#"
+                                      data-tippy="Quickview"
+                                      data-tippy-inertia="true"
+                                      data-tippy-animation="shift-away"
+                                      data-tippy-delay="50"
+                                      data-tippy-arrow="true"
+                                      data-tippy-theme="sharpborder"
+                                    >
+                                      <i class="pe-7s-look"></i>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a
+                                      href="cart.html"
+                                      data-tippy="Add to cart"
+                                      data-tippy-inertia="true"
+                                      data-tippy-animation="shift-away"
+                                      data-tippy-delay="50"
+                                      data-tippy-arrow="true"
+                                      data-tippy-theme="sharpborder"
+                                    >
+                                      <i class="pe-7s-cart"></i>
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
-                          </div>
-                          <div class="product-content">
-                            <a
-                              class="product-name"
-                              asp-controller="Product" asp-action="Index"
-                              >@product.Name</a>
-                            <div class="price-box pb-1">
-                              <span class="new-price">$@product.Price</span>
-                            </div>
-                            <div class="rating-box">
-                              <ul>
-                                  @for (int i = 0; i < product.Rating; i++)
-                                  {
-                                    <li> 
-                                        <i class="fa fa-star"></i>
-                                    </li>
-                                  }
-                              </ul>
+                            <div class="product-content">
+                              <a
+                                class="product-name"
+                                asp-controller="Product" asp-action="Index"
+                                >@product.Name</a>
+                              <div class="price-box pb-1">
+                                <span class="new-price">$@product.Price</span>
+                              </div>
+                              <div class="rating-box">
+                                <ul>
+                                    @for (int i = 0; i < product.Rating; i++)
+                                    {
+                                      <li> 
+                                          <i class="fa fa-star"></i>
+                                      </li>
+                                    }
+                                </ul>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      }
+                        }
                     </div>
                   </div>
                   <div
@@ -333,18 +288,20 @@
                     aria-labelledby="list-view-tab"
                   >
                     <div class="product-list-view row g-y-30">
-                      <div class="col-12">
+                        @foreach (var item in Model.HomeProducts)
+                        {              
+                            <div class="col-12">
                         <div class="product-item">
                           <div class="product-img">
                             <a asp-controller="Product" asp-action="Index">
                               <img
                                 class="primary-img"
-                                src="~/images/website-images/1-1-270x300.jpg"
+                                src="~/images/@item.Image"
                                 alt="Product Images"
                               />
                               <img
                                 class="secondary-img"
-                                src="~/images/website-images/1-2-270x300.jpg"
+                                src="~/images/@item.HoverImage"
                                 alt="Product Images"
                               />
                             </a>
@@ -353,25 +310,20 @@
                             <a
                               class="product-name"
                               asp-controller="Product" asp-action="Index"
-                              >American Marigold</a>
+                              >@item.Name</a>
                             <div class="price-box pb-1">
-                              <span class="new-price">$23.45</span>
+                              <span class="new-price">$@item.Price</span>
                             </div>
                             <div class="rating-box">
                               <ul>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
+                                  @for (int i = 0; i < item.Rating; i++)
+                                  {                                          
+                                      <li><i class="fa fa-star"></i></li>
+                                  }
                               </ul>
                             </div>
                             <p class="short-desc mb-0">
-                              Proin nec ligula dolor. Mauris mollis turpis vitae
-                              viverra viverra. Mauris at lacus commodo, dictum
-                              eros in, interdum diam. Sed lorem orci, maximus
-                              nec efficitur, mattis sed tortor. Voluptates
-                              repudiandae nulla rhoncus varius eget id eros.
+                              @item.Description
                             </p>
                             <div class="product-add-action">
                               <ul>
@@ -423,996 +375,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-12">
-                        <div class="product-item">
-                          <div class="product-img">
-                            <a asp-controller="Product" asp-action="Index">
-                              <img
-                                class="primary-img"
-                                src="~/images/website-images/1-2-270x300.jpg"
-                                alt="Product Images"
-                              />
-                              <img
-                                class="secondary-img"
-                                src="~/images/website-images/1-3-270x300.jpg"
-                                alt="Product Images"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content">
-                            <a
-                              class="product-name"
-                              asp-controller="Product" asp-action="Index"
-                              >Black Eyed Susan</a>
-                            <div class="price-box pb-1">
-                              <span class="new-price">$25.45</span>
-                            </div>
-                            <div class="rating-box">
-                              <ul>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                              </ul>
-                            </div>
-                            <p class="short-desc mb-0">
-                              Proin nec ligula dolor. Mauris mollis turpis vitae
-                              viverra viverra. Mauris at lacus commodo, dictum
-                              eros in, interdum diam. Sed lorem orci, maximus
-                              nec efficitur, mattis sed tortor. Voluptates
-                              repudiandae nulla rhoncus varius eget id eros.
-                            </p>
-                            <div class="product-add-action">
-                              <ul>
-                                <li>
-                                  <a
-                                    href="wishlist.html"
-                                    data-tippy="Add to wishlist"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-like"></i>
-                                  </a>
-                                </li>
-                                <li
-                                  class="quuickview-btn"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#quickModal"
-                                >
-                                  <a
-                                    href="#"
-                                    data-tippy="Quickview"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-look"></i>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a
-                                    href="cart.html"
-                                    data-tippy="Add to cart"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-cart"></i>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="product-item">
-                          <div class="product-img">
-                            <a asp-controller="Product" asp-action="Index">
-                              <img
-                                class="primary-img"
-                                src="~/images/website-images/1-3-270x300.jpg"
-                                alt="Product Images"
-                              />
-                              <img
-                                class="secondary-img"
-                                src="~/images/website-images/1-4-270x300.jpg"
-                                alt="Product Images"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content">
-                            <a
-                              class="product-name"
-                              asp-controller="Product" asp-action="Index"
-                              >Bleedin Heart</a>
-                            <div class="price-box pb-1">
-                              <span class="new-price">$30.45</span>
-                            </div>
-                            <div class="rating-box">
-                              <ul>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                              </ul>
-                            </div>
-                            <p class="short-desc mb-0">
-                              Proin nec ligula dolor. Mauris mollis turpis vitae
-                              viverra viverra. Mauris at lacus commodo, dictum
-                              eros in, interdum diam. Sed lorem orci, maximus
-                              nec efficitur, mattis sed tortor. Voluptates
-                              repudiandae nulla rhoncus varius eget id eros.
-                            </p>
-                            <div class="product-add-action">
-                              <ul>
-                                <li>
-                                  <a
-                                    href="wishlist.html"
-                                    data-tippy="Add to wishlist"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-like"></i>
-                                  </a>
-                                </li>
-                                <li
-                                  class="quuickview-btn"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#quickModal"
-                                >
-                                  <a
-                                    href="#"
-                                    data-tippy="Quickview"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-look"></i>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a
-                                    href="cart.html"
-                                    data-tippy="Add to cart"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-cart"></i>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="product-item">
-                          <div class="product-img">
-                            <a asp-controller="Product" asp-action="Index">
-                              <img
-                                class="primary-img"
-                                src="~/images/website-images/1-4-270x300.jpg"
-                                alt="Product Images"
-                              />
-                              <img
-                                class="secondary-img"
-                                src="~/images/website-images/1-5-270x300.jpg"
-                                alt="Product Images"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content">
-                            <a
-                              class="product-name"
-                              asp-controller="Product" asp-action="Index"
-                              >Bloody Cranesbill</a>
-                            <div class="price-box pb-1">
-                              <span class="new-price">$45.00</span>
-                            </div>
-                            <div class="rating-box">
-                              <ul>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                              </ul>
-                            </div>
-                            <p class="short-desc mb-0">
-                              Proin nec ligula dolor. Mauris mollis turpis vitae
-                              viverra viverra. Mauris at lacus commodo, dictum
-                              eros in, interdum diam. Sed lorem orci, maximus
-                              nec efficitur, mattis sed tortor. Voluptates
-                              repudiandae nulla rhoncus varius eget id eros.
-                            </p>
-                            <div class="product-add-action">
-                              <ul>
-                                <li>
-                                  <a
-                                    href="wishlist.html"
-                                    data-tippy="Add to wishlist"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-like"></i>
-                                  </a>
-                                </li>
-                                <li
-                                  class="quuickview-btn"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#quickModal"
-                                >
-                                  <a
-                                    href="#"
-                                    data-tippy="Quickview"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-look"></i>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a
-                                    href="cart.html"
-                                    data-tippy="Add to cart"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-cart"></i>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="product-item">
-                          <div class="product-img">
-                            <a asp-controller="Product" asp-action="Index">
-                              <img
-                                class="primary-img"
-                                src="~/images/website-images/1-5-270x300.jpg"
-                                alt="Product Images"
-                              />
-                              <img
-                                class="secondary-img"
-                                src="~/images/website-images/1-6-270x300.jpg"
-                                alt="Product Images"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content">
-                            <a
-                              class="product-name"
-                              asp-controller="Product" asp-action="Index"
-                              >Butterfly Weed</a>
-                            <div class="price-box pb-1">
-                              <span class="new-price">$50.45</span>
-                            </div>
-                            <div class="rating-box">
-                              <ul>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                              </ul>
-                            </div>
-                            <p class="short-desc mb-0">
-                              Proin nec ligula dolor. Mauris mollis turpis vitae
-                              viverra viverra. Mauris at lacus commodo, dictum
-                              eros in, interdum diam. Sed lorem orci, maximus
-                              nec efficitur, mattis sed tortor. Voluptates
-                              repudiandae nulla rhoncus varius eget id eros.
-                            </p>
-                            <div class="product-add-action">
-                              <ul>
-                                <li>
-                                  <a
-                                    href="wishlist.html"
-                                    data-tippy="Add to wishlist"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-like"></i>
-                                  </a>
-                                </li>
-                                <li
-                                  class="quuickview-btn"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#quickModal"
-                                >
-                                  <a
-                                    href="#"
-                                    data-tippy="Quickview"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-look"></i>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a
-                                    href="cart.html"
-                                    data-tippy="Add to cart"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-cart"></i>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="product-item">
-                          <div class="product-img">
-                            <a asp-controller="Product" asp-action="Index">
-                              <img
-                                class="primary-img"
-                                src="~/images/website-images/1-6-270x300.jpg"
-                                alt="Product Images"
-                              />
-                              <img
-                                class="secondary-img"
-                                src="~/images/website-images/1-7-270x300.jpg"
-                                alt="Product Images"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content">
-                            <a
-                              class="product-name"
-                              asp-controller="Product" asp-action="Index"
-                              >Common Yarrow</a>
-                            <div class="price-box pb-1">
-                              <span class="new-price">$65.00</span>
-                            </div>
-                            <div class="rating-box">
-                              <ul>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                              </ul>
-                            </div>
-                            <p class="short-desc mb-0">
-                              Proin nec ligula dolor. Mauris mollis turpis vitae
-                              viverra viverra. Mauris at lacus commodo, dictum
-                              eros in, interdum diam. Sed lorem orci, maximus
-                              nec efficitur, mattis sed tortor. Voluptates
-                              repudiandae nulla rhoncus varius eget id eros.
-                            </p>
-                            <div class="product-add-action">
-                              <ul>
-                                <li>
-                                  <a
-                                    href="wishlist.html"
-                                    data-tippy="Add to wishlist"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-like"></i>
-                                  </a>
-                                </li>
-                                <li
-                                  class="quuickview-btn"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#quickModal"
-                                >
-                                  <a
-                                    href="#"
-                                    data-tippy="Quickview"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-look"></i>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a
-                                    href="cart.html"
-                                    data-tippy="Add to cart"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-cart"></i>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="product-item">
-                          <div class="product-img">
-                            <a asp-controller="Product" asp-action="Index">
-                              <img
-                                class="primary-img"
-                                src="~/images/website-images/1-7-270x300.jpg"
-                                alt="Product Images"
-                              />
-                              <img
-                                class="secondary-img"
-                                src="~/images/website-images/1-8-270x300.jpg"
-                                alt="Product Images"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content">
-                            <a
-                              class="product-name"
-                              asp-controller="Product" asp-action="Index"
-                              >Doublefile Viburnum</a>
-                            <div class="price-box pb-1">
-                              <span class="new-price">$67.45</span>
-                            </div>
-                            <div class="rating-box">
-                              <ul>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                              </ul>
-                            </div>
-                            <p class="short-desc mb-0">
-                              Proin nec ligula dolor. Mauris mollis turpis vitae
-                              viverra viverra. Mauris at lacus commodo, dictum
-                              eros in, interdum diam. Sed lorem orci, maximus
-                              nec efficitur, mattis sed tortor. Voluptates
-                              repudiandae nulla rhoncus varius eget id eros.
-                            </p>
-                            <div class="product-add-action">
-                              <ul>
-                                <li>
-                                  <a
-                                    href="wishlist.html"
-                                    data-tippy="Add to wishlist"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-like"></i>
-                                  </a>
-                                </li>
-                                <li
-                                  class="quuickview-btn"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#quickModal"
-                                >
-                                  <a
-                                    href="#"
-                                    data-tippy="Quickview"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-look"></i>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a
-                                    href="cart.html"
-                                    data-tippy="Add to cart"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-cart"></i>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="product-item">
-                          <div class="product-img">
-                            <a asp-controller="Product" asp-action="Index">
-                              <img
-                                class="primary-img"
-                                src="~/images/website-images/1-8-270x300.jpg"
-                                alt="Product Images"
-                              />
-                              <img
-                                class="secondary-img"
-                                src="~/images/website-images/1-9-270x300.jpg"
-                                alt="Product Images"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content">
-                            <a
-                              class="product-name"
-                              asp-controller="Product" asp-action="Index"
-                              >Feather Reed Grass</a>
-                            <div class="price-box pb-1">
-                              <span class="new-price">$20.00</span>
-                            </div>
-                            <div class="rating-box">
-                              <ul>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                              </ul>
-                            </div>
-                            <p class="short-desc mb-0">
-                              Proin nec ligula dolor. Mauris mollis turpis vitae
-                              viverra viverra. Mauris at lacus commodo, dictum
-                              eros in, interdum diam. Sed lorem orci, maximus
-                              nec efficitur, mattis sed tortor. Voluptates
-                              repudiandae nulla rhoncus varius eget id eros.
-                            </p>
-                            <div class="product-add-action">
-                              <ul>
-                                <li>
-                                  <a
-                                    href="wishlist.html"
-                                    data-tippy="Add to wishlist"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-like"></i>
-                                  </a>
-                                </li>
-                                <li
-                                  class="quuickview-btn"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#quickModal"
-                                >
-                                  <a
-                                    href="#"
-                                    data-tippy="Quickview"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-look"></i>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a
-                                    href="cart.html"
-                                    data-tippy="Add to cart"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-cart"></i>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="product-item">
-                          <div class="product-img">
-                            <a asp-controller="Product" asp-action="Index">
-                              <img
-                                class="primary-img"
-                                src="~/images/website-images/1-9-270x300.jpg"
-                                alt="Product Images"
-                              />
-                              <img
-                                class="secondary-img"
-                                src="~/images/website-images/1-10-270x300.jpg"
-                                alt="Product Images"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content">
-                            <a
-                              class="product-name"
-                              asp-controller="Product" asp-action="Index"
-                              >Moss Verbena</a>
-                            <div class="price-box pb-1">
-                              <span class="new-price">$15.25</span>
-                            </div>
-                            <div class="rating-box">
-                              <ul>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                              </ul>
-                            </div>
-                            <p class="short-desc mb-0">
-                              Proin nec ligula dolor. Mauris mollis turpis vitae
-                              viverra viverra. Mauris at lacus commodo, dictum
-                              eros in, interdum diam. Sed lorem orci, maximus
-                              nec efficitur, mattis sed tortor. Voluptates
-                              repudiandae nulla rhoncus varius eget id eros.
-                            </p>
-                            <div class="product-add-action">
-                              <ul>
-                                <li>
-                                  <a
-                                    href="wishlist.html"
-                                    data-tippy="Add to wishlist"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-like"></i>
-                                  </a>
-                                </li>
-                                <li
-                                  class="quuickview-btn"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#quickModal"
-                                >
-                                  <a
-                                    href="#"
-                                    data-tippy="Quickview"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-look"></i>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a
-                                    href="cart.html"
-                                    data-tippy="Add to cart"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-cart"></i>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="product-item">
-                          <div class="product-img">
-                            <a asp-controller="Product" asp-action="Index">
-                              <img
-                                class="primary-img"
-                                src="~/images/website-images/1-10-270x300.jpg"
-                                alt="Product Images"
-                              />
-                              <img
-                                class="secondary-img"
-                                src="~/images/website-images/1-1-270x300.jpg"
-                                alt="Product Images"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content">
-                            <a
-                              class="product-name"
-                              asp-controller="Product" asp-action="Index"
-                              >Million Gold</a>
-                            <div class="price-box pb-1">
-                              <span class="new-price">$72.25</span>
-                            </div>
-                            <div class="rating-box">
-                              <ul>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                              </ul>
-                            </div>
-                            <p class="short-desc mb-0">
-                              Proin nec ligula dolor. Mauris mollis turpis vitae
-                              viverra viverra. Mauris at lacus commodo, dictum
-                              eros in, interdum diam. Sed lorem orci, maximus
-                              nec efficitur, mattis sed tortor. Voluptates
-                              repudiandae nulla rhoncus varius eget id eros.
-                            </p>
-                            <div class="product-add-action">
-                              <ul>
-                                <li>
-                                  <a
-                                    href="wishlist.html"
-                                    data-tippy="Add to wishlist"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-like"></i>
-                                  </a>
-                                </li>
-                                <li
-                                  class="quuickview-btn"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#quickModal"
-                                >
-                                  <a
-                                    href="#"
-                                    data-tippy="Quickview"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-look"></i>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a
-                                    href="cart.html"
-                                    data-tippy="Add to cart"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-cart"></i>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="product-item">
-                          <div class="product-img">
-                            <a asp-controller="Product" asp-action="Index">
-                              <img
-                                class="primary-img"
-                                src="~/images/website-images/1-11-270x300.jpg"
-                                alt="Product Images"
-                              />
-                              <img
-                                class="secondary-img"
-                                src="~/images/website-images/1-1-270x300.jpg"
-                                alt="Product Images"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content">
-                            <a
-                              class="product-name"
-                              asp-controller="Product" asp-action="Index"
-                              >Hybrid Pansy</a>
-                            <div class="price-box pb-1">
-                              <span class="new-price">$54.25</span>
-                            </div>
-                            <div class="rating-box">
-                              <ul>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                              </ul>
-                            </div>
-                            <p class="short-desc mb-0">
-                              Proin nec ligula dolor. Mauris mollis turpis vitae
-                              viverra viverra. Mauris at lacus commodo, dictum
-                              eros in, interdum diam. Sed lorem orci, maximus
-                              nec efficitur, mattis sed tortor. Voluptates
-                              repudiandae nulla rhoncus varius eget id eros.
-                            </p>
-                            <div class="product-add-action">
-                              <ul>
-                                <li>
-                                  <a
-                                    href="wishlist.html"
-                                    data-tippy="Add to wishlist"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-like"></i>
-                                  </a>
-                                </li>
-                                <li
-                                  class="quuickview-btn"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#quickModal"
-                                >
-                                  <a
-                                    href="#"
-                                    data-tippy="Quickview"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-look"></i>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a
-                                    href="cart.html"
-                                    data-tippy="Add to cart"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-cart"></i>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <div class="product-item">
-                          <div class="product-img">
-                            <a asp-controller="Product" asp-action="Index">
-                              <img
-                                class="primary-img"
-                                src="~/images/website-images/1-7-270x300.jpg"
-                                alt="Product Images"
-                              />
-                              <img
-                                class="secondary-img"
-                                src="~/images/website-images/1-8-270x300.jpg"
-                                alt="Product Images"
-                              />
-                            </a>
-                          </div>
-                          <div class="product-content">
-                            <a
-                              class="product-name"
-                              asp-controller="Product" asp-action="Index"
-                              >Doublefile Viburnum</a>
-                            <div class="price-box pb-1">
-                              <span class="new-price">$67.45</span>
-                            </div>
-                            <div class="rating-box">
-                              <ul>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                              </ul>
-                            </div>
-                            <p class="short-desc mb-0">
-                              Proin nec ligula dolor. Mauris mollis turpis vitae
-                              viverra viverra. Mauris at lacus commodo, dictum
-                              eros in, interdum diam. Sed lorem orci, maximus
-                              nec efficitur, mattis sed tortor. Voluptates
-                              repudiandae nulla rhoncus varius eget id eros.
-                            </p>
-                            <div class="product-add-action">
-                              <ul>
-                                <li>
-                                  <a
-                                    href="wishlist.html"
-                                    data-tippy="Add to wishlist"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-like"></i>
-                                  </a>
-                                </li>
-                                <li
-                                  class="quuickview-btn"
-                                  data-bs-toggle="modal"
-                                  data-bs-target="#quickModal"
-                                >
-                                  <a
-                                    href="#"
-                                    data-tippy="Quickview"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-look"></i>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a
-                                    href="cart.html"
-                                    data-tippy="Add to cart"
-                                    data-tippy-inertia="true"
-                                    data-tippy-animation="shift-away"
-                                    data-tippy-delay="50"
-                                    data-tippy-arrow="true"
-                                    data-tippy-theme="sharpborder"
-                                  >
-                                    <i class="pe-7s-cart"></i>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                        }
                     </div>
                   </div>
                 </div>

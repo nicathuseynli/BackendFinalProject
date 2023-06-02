@@ -28,6 +28,7 @@ namespace Backend_Final_Project.Data
         public DbSet<HeaderInfo> HeaderInfos { get; set; }
         public DbSet<RealetedProduct> RealetedProducts { get; set; }
         public DbSet<SingleProduct> SingleProducts { get; set; }
+        public DbSet<ShopPageColour> ShopPageColours { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

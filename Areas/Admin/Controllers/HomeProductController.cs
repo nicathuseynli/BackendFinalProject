@@ -29,6 +29,7 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
         public async Task<IActionResult> Create()
         {
             ViewBag.Category = new SelectList(await _context.HomeCategories.ToListAsync(),"Id","Name" );
+            ViewBag.Colour = new SelectList(await _context.ShopPageColours.ToListAsync(),"Id","Colour" );
             return View();
         }
 
@@ -39,6 +40,7 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
             if (!ModelState.IsValid)
             {
                 ViewBag.Category = new SelectList(await _context.HomeCategories.ToListAsync(), "Id", "Name");
+                ViewBag.Colour = new SelectList(await _context.ShopPageColours.ToListAsync(), "Id", "Colour");
                 return View();
             }
 
@@ -67,6 +69,7 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
                 Price = createhomeproductVm.Price,
                 Description = createhomeproductVm.Description,
                 HomeCategoryId = createhomeproductVm.HomeCategoryId,
+                ShopPageColourId = createhomeproductVm.ShopPageColourId,
                 Image = filename,
                 HoverImage = Hoverfilename,
             };
@@ -109,6 +112,9 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
+            ViewBag.Category = new SelectList(await _context.HomeCategories.ToListAsync(), "Id", "Name");
+            ViewBag.Colour = new SelectList(await _context.ShopPageColours.ToListAsync(), "Id", "Colour");
+
             var homeproduct = await _context.HomeProducts.FirstOrDefaultAsync(x => x.Id == id);
             if (homeproduct == null) return NotFound();
 
@@ -116,12 +122,14 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
             {
                 Id = id,
                 HomeCategoryId = homeproduct.HomeCategoryId,
+                ShopPageColourId = homeproduct.ShopPageColourId,
                 Name = homeproduct.Name,
                 Price = homeproduct.Price,
                 Rating = homeproduct.Rating,
                 Description = homeproduct.Description,
                 Image = homeproduct.Image,
                 HoverImage = homeproduct.HoverImage,
+                
             };
 
             return View(updateHomeProductVM);
@@ -131,6 +139,9 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Update(UpdateHomeProductVM updateHomeProductVM)
         {
+
+            ViewBag.Category = new SelectList(await _context.HomeCategories.ToListAsync(), "Id", "Name");
+            ViewBag.Colour = new SelectList(await _context.ShopPageColours.ToListAsync(), "Id", "Colour");
 
             var homeproduct = await _context.HomeProducts.FirstOrDefaultAsync(x => x.Id == updateHomeProductVM.Id);
             if (homeproduct == null) return NotFound();
@@ -172,6 +183,7 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
             homeproduct.Rating = updateHomeProductVM.Rating;
             homeproduct.Description = updateHomeProductVM.Description;
             homeproduct.HomeCategoryId = updateHomeProductVM.HomeCategoryId;
+            homeproduct.ShopPageColourId = updateHomeProductVM.ShopPageColourId;
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

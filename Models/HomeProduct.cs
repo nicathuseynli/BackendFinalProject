@@ -11,7 +11,7 @@ public class HomeProduct:BaseEntity<int>
     [MaxLength(100)]
     public decimal Price { get; set; }
 
-    [MaxLength(50)]
+    [MaxLength(10)]
     public decimal Rating { get; set; }
 
     public string Image { get; set; }
@@ -29,5 +29,10 @@ public class HomeProduct:BaseEntity<int>
     //navigation
     public virtual HomeCategory HomeCategory { get; set; }
 
+    public virtual ShopPageColour ShopPageColour { get; set; }
+
     public int HomeCategoryId { get; set; }
+
+    public int ShopPageColourId { get; set; }
+
 }

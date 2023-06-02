@@ -1,6 +1,7 @@
 ﻿@model HomeVM
 @{
     ViewData["Title"] = "Home Page";
+    int BannerCount = Model.Baners.Count();
 }
 
  <!-- Begin Slider Area -->
@@ -301,34 +302,38 @@
       <!-- Product Area End Here -->
 
       <!-- Begin Banner Area -->
-          <div class="banner-area section-space-top-90">
+      <div class="banner-area section-space-top-90">
         <div class="container">
           <div class="row g-min-30 g-4">
             <div class="col-lg-8">
               <div class="banner-item img-hover-effect">
-                <div class="banner-img">
-                    @if (Model.Baners[0] != null)
-                    {
-                     <img src="~/images/@Model.Baners[0].BannerImage"
-                      alt="Banner Image"/>
-                    }
+                @if (BannerCount>0)
+                {  
+                 <div class="banner-img">
+                    <img
+                    src="~/images/@Model.Baners[0].BannerImage"
+                    alt="Banner Image"
+                  />
                 </div>
-                <div class="banner-content text-position-left">
+                   <div class="banner-content text-position-left">
                   <span class="collection">@Model.Baners[0].Title</span>
                   <h3 class="title">
                     @Model.Baners[0].Description
                   </h3>
-                  <div class="button-wrap">
+                    <div class="button-wrap">
                     <a
                       class="btn btn-custom-size btn-pronia-primary"
                       asp-controller="Shop" asp-action="Index"
                       >Shop Now</a>
+                    </div>
                   </div>
-                </div>
+                }
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="banner-item img-hover-effect">
+                @if (BannerCount>1)
+                {
+                  <div class="banner-item img-hover-effect">
                 <div class="banner-img">
                   <img
                     src="~/images/@Model.Baners[1].BannerImage"
@@ -348,9 +353,12 @@
                   </div>
                 </div>
               </div>
+                }
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="banner-item img-hover-effect">
+                @if (BannerCount>2)
+                {
+                  <div class="banner-item img-hover-effect">
                     <div class="banner-img">
                         <img src="~/images/@Model.Baners[2].BannerImage"
                              alt="Banner Image" />
@@ -366,9 +374,12 @@
                         </div>
                     </div>
                 </div>
+                }
             </div>
             <div class="col-lg-8">
-                <div class="banner-item img-hover-effect">
+                @if (BannerCount>3)
+                {
+                   <div class="banner-item img-hover-effect">
                     <div class="banner-img">
                         <img src="~/images/@Model.Baners[3].BannerImage"
                              alt="Banner Image" />
@@ -384,6 +395,7 @@
                         </div>
                     </div>
                 </div>
+                }
             </div>
           </div>
         </div>

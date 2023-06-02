@@ -11,6 +11,8 @@ public class UpdateHomeProductVM
 
     public int HomeCategoryId { get; set; }
 
+    public int ShopPageColourId { get; set; }
+
     public decimal Price { get; set; }
 
     public decimal Rating { get; set; }

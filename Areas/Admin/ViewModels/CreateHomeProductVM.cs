@@ -13,6 +13,8 @@ public class CreateHomeProductVM
     
     public int HomeCategoryId { get; set; }
 
+    public int ShopPageColourId { get; set; }
+
     public decimal Rating { get; set; }
     [Required]
     public IFormFile Photo { get; set; } 

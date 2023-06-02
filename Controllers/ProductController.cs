@@ -14,9 +14,9 @@ namespace Backend_Final_Project.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? id)
         {
-            var homeproduct= await _context.HomeProducts.FirstOrDefaultAsync();
+            var homeproduct= await _context.HomeProducts.Include(c=>c.HomeCategory).FirstOrDefaultAsync(x=>x.Id==id);
             var newproducts = await _context.HomeProducts.ToListAsync();
             var realetedProduct = await _context.RealetedProducts.FirstOrDefaultAsync();
             var singleProduct = await _context.SingleProducts.FirstOrDefaultAsync();

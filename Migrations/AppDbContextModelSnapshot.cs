@@ -367,9 +367,14 @@ namespace Backend_Final_Project.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<int>("ShopPageColourId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("HomeCategoryId");
+
+                    b.HasIndex("ShopPageColourId");
 
                     b.ToTable("HomeProducts");
                 });
@@ -436,6 +441,23 @@ namespace Backend_Final_Project.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Shippings");
+                });
+
+            modelBuilder.Entity("Backend_Final_Project.Models.ShopPageColour", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Colour")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ShopPageColours");
                 });
 
             modelBuilder.Entity("Backend_Final_Project.Models.SingleProduct", b =>
@@ -713,7 +735,15 @@ namespace Backend_Final_Project.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Backend_Final_Project.Models.ShopPageColour", "ShopPageColour")
+                        .WithMany("HomeProducts")
+                        .HasForeignKey("ShopPageColourId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("HomeCategory");
+
+                    b.Navigation("ShopPageColour");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -768,6 +798,11 @@ namespace Backend_Final_Project.Migrations
                 });
 
             modelBuilder.Entity("Backend_Final_Project.Models.HomeCategory", b =>
+                {
+                    b.Navigation("HomeProducts");
+                });
+
+            modelBuilder.Entity("Backend_Final_Project.Models.ShopPageColour", b =>
                 {
                     b.Navigation("HomeProducts");
                 });
