@@ -133,7 +133,6 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
             };
 
             return View(updateHomeProductVM);
-
         }
 
         [HttpPost]
@@ -188,7 +187,6 @@ namespace Backend_Final_Project.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
     }
-
     //ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Name", mcat.CategoryId);
 }
 

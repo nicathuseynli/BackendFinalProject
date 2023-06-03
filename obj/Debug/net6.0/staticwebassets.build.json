@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fDhDqms9cEIbTE5riR9K6Vp2aUuCWHGiZ8CjEZEgWIU=",
+  "Hash": "Gcef+Tp6zwRN0SIEtLaAMWa6+8frOjJR7VYKyyxZBew=",
   "Source": "Backend Final Project",
   "BasePath": "_content/Backend Final Project",
   "Mode": "Default",
@@ -3043,6 +3043,23 @@
       "OriginalItemSpec": "wwwroot\\fonts\\Pe-icon-7-stroke.woff"
     },
     {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\03f436c6-e5cc-49eb-b98b-596718276758_WIN_20230217_19_19_02_Pro.jpg",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/03f436c6-e5cc-49eb-b98b-596718276758_WIN_20230217_19_19_02_Pro.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\03f436c6-e5cc-49eb-b98b-596718276758_WIN_20230217_19_19_02_Pro.jpg"
+    },
+    {
       "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\0546ec50-9f5c-4798-b2a7-9797e2bfa603_desktop.jpg",
       "SourceId": "Backend Final Project",
       "SourceType": "Discovered",
@@ -3145,6 +3162,23 @@
       "OriginalItemSpec": "wwwroot\\images\\128451c4-e1f8-4620-961b-192dc4cc0012_WIN_20230217_19_19_02_Pro.jpg"
     },
     {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\14d59a91-9965-481a-99e2-80dcf5a8325e_3hcns7bt28muj7ih.jpg",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/14d59a91-9965-481a-99e2-80dcf5a8325e_3hcns7bt28muj7ih.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\14d59a91-9965-481a-99e2-80dcf5a8325e_3hcns7bt28muj7ih.jpg"
+    },
+    {
       "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\1d65cc33-d21d-41ae-a91b-0b55801c08c5_3hcns7bt28muj7ih.jpg",
       "SourceId": "Backend Final Project",
       "SourceType": "Discovered",
@@ -3177,6 +3211,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\2195a068-63dc-4af9-b93c-d044b37a03f3_desktop.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\2418b3cc-3556-4e91-a3b7-e96c8a781ef6_3hcns7bt28muj7ih.jpg",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/2418b3cc-3556-4e91-a3b7-e96c8a781ef6_3hcns7bt28muj7ih.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\2418b3cc-3556-4e91-a3b7-e96c8a781ef6_3hcns7bt28muj7ih.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\2977a70e-b945-4ab4-b489-a21c281a1bc9_WIN_20230112_23_28_40_Pro.jpg",
@@ -3313,6 +3364,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\32d96fbf-aac3-41be-8972-ec573b0f5de7_desktop.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\32f5293e-0b17-4c68-9c01-fdb880b72ef7_desktop.jpg",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/32f5293e-0b17-4c68-9c01-fdb880b72ef7_desktop.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\32f5293e-0b17-4c68-9c01-fdb880b72ef7_desktop.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\3381d0ae-a51e-4119-af63-301d582ec7be_3hcns7bt28muj7ih.jpg",
@@ -3502,6 +3570,23 @@
       "OriginalItemSpec": "wwwroot\\images\\4519c2dd-0f08-4004-b11b-6ee12e499100_Screenshot 2023-04-05 224949.png"
     },
     {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\45fb7107-5476-4b67-913c-c3328e1cc231_3hcns7bt28muj7ih.jpg",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/45fb7107-5476-4b67-913c-c3328e1cc231_3hcns7bt28muj7ih.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\45fb7107-5476-4b67-913c-c3328e1cc231_3hcns7bt28muj7ih.jpg"
+    },
+    {
       "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\45fe5ce0-cf0a-4b2b-a4b4-726f249c9a3a_3hcns7bt28muj7ih.jpg",
       "SourceId": "Backend Final Project",
       "SourceType": "Discovered",
@@ -3672,6 +3757,23 @@
       "OriginalItemSpec": "wwwroot\\images\\4f508698-a2d6-41b3-bd65-4bd9e229c1ce_3hcns7bt28muj7ih.jpg"
     },
     {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\52809f6d-a828-4482-8f1d-914f88b0de3f_desktop.jpg",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/52809f6d-a828-4482-8f1d-914f88b0de3f_desktop.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\52809f6d-a828-4482-8f1d-914f88b0de3f_desktop.jpg"
+    },
+    {
       "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\53fcf6f9-5307-4f5d-9fd1-f548d5e36553_3hcns7bt28muj7ih.jpg",
       "SourceId": "Backend Final Project",
       "SourceType": "Discovered",
@@ -3721,6 +3823,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\56c5a0ff-3e4f-42ef-a7dc-aabc9025ddd3_WIN_20230116_17_23_42_Pro.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\57534d1d-a239-466d-addd-3585c460229e_Screenshot 2023-04-05 224949.png",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/57534d1d-a239-466d-addd-3585c460229e_Screenshot 2023-04-05 224949.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\57534d1d-a239-466d-addd-3585c460229e_Screenshot 2023-04-05 224949.png"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\583db348-f5df-4196-9340-c4907bdd8a0a_desktop.jpg",
@@ -3842,6 +3961,23 @@
       "OriginalItemSpec": "wwwroot\\images\\666c48a8-e3ea-4f1c-9498-8bb88fffc8a7_desktop.jpg"
     },
     {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\66c66145-6e07-4d58-82a7-d92a93d36d81_Screenshot 2023-04-05 224949.png",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/66c66145-6e07-4d58-82a7-d92a93d36d81_Screenshot 2023-04-05 224949.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\66c66145-6e07-4d58-82a7-d92a93d36d81_Screenshot 2023-04-05 224949.png"
+    },
+    {
       "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\670dbca4-0094-45d8-960f-6484814e33b5__WIN_20230108_00_08_02_Pro.jpg",
       "SourceId": "Backend Final Project",
       "SourceType": "Discovered",
@@ -3908,6 +4044,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\6b9c2613-4480-4e52-b8d7-a0223da01e3d _ WIN_20230116_17_23_42_Pro.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\6db7da7e-3a74-457c-b5bc-8f0f7470867b_3hcns7bt28muj7ih.jpg",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/6db7da7e-3a74-457c-b5bc-8f0f7470867b_3hcns7bt28muj7ih.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\6db7da7e-3a74-457c-b5bc-8f0f7470867b_3hcns7bt28muj7ih.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\6f793906-75ae-4897-8b8b-d80917a71666_desktop.jpg",
@@ -4044,6 +4197,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\82d4235d-fb8c-4af3-b71d-d99324f91c27_WIN_20230108_00_08_06_Pro.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\85504103-869f-4e47-9571-32d8d9b21c00_desktop.jpg",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/85504103-869f-4e47-9571-32d8d9b21c00_desktop.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\85504103-869f-4e47-9571-32d8d9b21c00_desktop.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\856e0282-0676-40da-a022-6e621fc933a7_WIN_20230112_23_28_19_Pro.jpg",
@@ -4267,6 +4437,40 @@
       "OriginalItemSpec": "wwwroot\\images\\9bd36fb5-a829-4077-895a-fee096ecefdf_3hcns7bt28muj7ih.jpg"
     },
     {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\9bed02e3-571d-4b7b-b8d9-bddbade9e617_desktop.jpg",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/9bed02e3-571d-4b7b-b8d9-bddbade9e617_desktop.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\9bed02e3-571d-4b7b-b8d9-bddbade9e617_desktop.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\9cfed27b-8bee-44e3-b20d-1dd98cb47c97_Screenshot 2023-04-05 224949.png",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/9cfed27b-8bee-44e3-b20d-1dd98cb47c97_Screenshot 2023-04-05 224949.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\9cfed27b-8bee-44e3-b20d-1dd98cb47c97_Screenshot 2023-04-05 224949.png"
+    },
+    {
       "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\9fb32480-b2e4-40c1-8a05-7bf104669f1c_desktop.jpg",
       "SourceId": "Backend Final Project",
       "SourceType": "Discovered",
@@ -4299,6 +4503,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\a3712f21-2798-4ddc-9b41-94480edd0644_Screenshot 2023-04-05 224949.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\a4109ed0-91af-4d47-80b2-37d9d0691aff_desktop.jpg",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/a4109ed0-91af-4d47-80b2-37d9d0691aff_desktop.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\a4109ed0-91af-4d47-80b2-37d9d0691aff_desktop.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\a6fd9d79-e1e5-49e8-896a-ada8f7bc2e55_desktop.jpg",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/a6fd9d79-e1e5-49e8-896a-ada8f7bc2e55_desktop.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\a6fd9d79-e1e5-49e8-896a-ada8f7bc2e55_desktop.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\a7d61758-d7b2-478a-b8cb-3daff259d1a0_WIN_20230108_00_08_06_Pro.jpg",
@@ -4505,6 +4743,23 @@
       "OriginalItemSpec": "wwwroot\\images\\afaccaa6-e0c3-4069-b022-d016894ef427_WIN_20230108_00_08_06_Pro.jpg"
     },
     {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\b05a6437-95b6-48d4-8f7d-344429837c3f_Screenshot 2023-04-05 224949.png",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/b05a6437-95b6-48d4-8f7d-344429837c3f_Screenshot 2023-04-05 224949.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\b05a6437-95b6-48d4-8f7d-344429837c3f_Screenshot 2023-04-05 224949.png"
+    },
+    {
       "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\b2afaadd-785a-42ec-b070-2ab1c24a9b5a_WIN_20230217_19_19_02_Pro.jpg",
       "SourceId": "Backend Final Project",
       "SourceType": "Discovered",
@@ -4571,6 +4826,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\b544ed88-05dd-4494-ae9f-02eedd50a76f_aze gerb (2).jfif"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\b572a9ca-1365-44fb-8ba6-02a0d20a9b2c_3hcns7bt28muj7ih.jpg",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/b572a9ca-1365-44fb-8ba6-02a0d20a9b2c_3hcns7bt28muj7ih.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\b572a9ca-1365-44fb-8ba6-02a0d20a9b2c_3hcns7bt28muj7ih.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\b57ddfac-f3a6-462f-89d7-82fbed7cf25e_WIN_20230217_19_19_02_Pro.jpg",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/b57ddfac-f3a6-462f-89d7-82fbed7cf25e_WIN_20230217_19_19_02_Pro.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\b57ddfac-f3a6-462f-89d7-82fbed7cf25e_WIN_20230217_19_19_02_Pro.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\b9f9d026-fa65-4192-a0ea-c75cee53bda5_desktop.jpg",
@@ -5202,6 +5491,23 @@
       "OriginalItemSpec": "wwwroot\\images\\c7190bc7-670a-438b-ac80-887629cd9bb0_Screenshot 2023-04-05 224949.png"
     },
     {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\c8e76ba7-6338-4d2a-b9d0-70c316e845f9_desktop.jpg",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/c8e76ba7-6338-4d2a-b9d0-70c316e845f9_desktop.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\c8e76ba7-6338-4d2a-b9d0-70c316e845f9_desktop.jpg"
+    },
+    {
       "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\c963632f-02c4-4fad-b115-16112ca4cf29_3hcns7bt28muj7ih.jpg",
       "SourceId": "Backend Final Project",
       "SourceType": "Discovered",
@@ -5593,6 +5899,23 @@
       "OriginalItemSpec": "wwwroot\\images\\f408c178-82b7-41d3-ab28-fc0bb384f821_WIN_20230108_00_08_06_Pro.jpg"
     },
     {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\f4a8c036-39ab-4cf5-b68d-289595264a5e_Screenshot 2023-04-05 224949.png",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/f4a8c036-39ab-4cf5-b68d-289595264a5e_Screenshot 2023-04-05 224949.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\f4a8c036-39ab-4cf5-b68d-289595264a5e_Screenshot 2023-04-05 224949.png"
+    },
+    {
       "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\f50495d7-f639-4a8a-bd6e-3e024da22077_3hcns7bt28muj7ih.jpg",
       "SourceId": "Backend Final Project",
       "SourceType": "Discovered",
@@ -5676,6 +5999,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\fb9342a4-264f-400b-bc22-187b75c410c2_Screenshot 2023-04-05 224949.png",
+      "SourceId": "Backend Final Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\",
+      "BasePath": "_content/Backend Final Project",
+      "RelativePath": "images/fb9342a4-264f-400b-bc22-187b75c410c2_Screenshot 2023-04-05 224949.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\fb9342a4-264f-400b-bc22-187b75c410c2_Screenshot 2023-04-05 224949.png"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\Backend Final Project\\Backend Final Project\\wwwroot\\images\\footer\\bg\\1-1920x465.jpg",

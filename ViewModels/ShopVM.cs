@@ -1,4 +1,5 @@
 ﻿using Backend_Final_Project.Models;
+using Backend_Final_Project.Utilities.Pagination;
 
 namespace Backend_Final_Project.ViewModels
 {
@@ -14,5 +15,6 @@ namespace Backend_Final_Project.ViewModels
 
         public HomeProduct HomeProduct { get; set; }
 
+        public Paginate<HomeProduct> Paginates { get; set; }
     }
 }
