@@ -382,12 +382,12 @@
                 <div class="pagination-area">
                   <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
-                      <li class="page-item" @(Model.Paginates.CuurentPage ==1? "disabled":"") ><a class="page-link" asp-action="Index" asp-route-page="@(Model.Paginates.CuurentPage-1)"  aria-label="Previus">Prev</a></li>
+                      <li class="page-item" @(Model.Paginates.CuurentPage ==1? "disabled":"") ><a class="page-link" asp-action="Index" asp-route-currentPage="@(Model.Paginates.CuurentPage-1)"  aria-label="Previus">Prev</a></li>
                           @for (int i = 1; i < Model.Paginates.TotalPage; i++)
                           {
-                               <li class="page-item" @(Model.Paginates.CuurentPage ==i? "disabled":"")><a class="page-link"asp-action="Index" asp-route-page="@i">@i</a></li>
+                               <li class="page-item" @(Model.Paginates.CuurentPage ==i? "disabled":"")><a class="page-link"asp-action="Index" asp-route-currentPage="@i">@i</a></li>
                           }
-                      <li class="page-item" @(Model.Paginates.CuurentPage == Model.Paginates.TotalPage ? "disabled":"") ><a class="page-link"  asp-action="Index" asp-route-page="@(Model.Paginates.CuurentPage-1)" aria-label="Next">Next</a></li>
+                      <li class="page-item" @(Model.Paginates.CuurentPage == Model.Paginates.TotalPage ? "disabled":"") ><a class="page-link"  asp-action="Index" asp-route-currentPage="@(Model.Paginates.CuurentPage-1)" aria-label="Next">Next</a></li>
                     </ul>
                   </nav>
                 </div>
